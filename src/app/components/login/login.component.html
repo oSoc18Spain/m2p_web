@@ -1,3 +1,25 @@
-<p>
-  login works!
-</p>
+<main>
+  <div class="container__login" [style.background]="''">
+    <form action=""> 
+      <label for="id_employee" translate>login.id_employee</label>
+      <input type="text" name="id_employee">
+      <label for="pass_employee" translate>login.pass_employee</label>
+      <input type="password" name="pass_employee">
+    </form>
+  </div>
+</main>
+
+<style>
+  .container__login{
+    background: url('./assets/img/lilly_bck.jpg') no-repeat center center ;
+    background-size: 100% 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (max-width: 992px){
+    .container__login{
+        min-height: 0;
+    }
+}
+</style>

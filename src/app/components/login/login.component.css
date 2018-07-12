@@ -1,0 +1,19 @@
+/**************************  LOGIN FORM **************************/
+.container__login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-bck);
+    width: 200px;
+    height: 300px;
+    margin: 50px 40vw 50px 0;
+    color: #fff;
+}
+
+@media screen and (max-width: 992px){
+    .container__login form{
+        margin-right: 0;
+    }
+}
+/*************************** END LOGIN *****************************/
