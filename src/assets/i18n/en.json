@@ -1,0 +1,12 @@
+{
+    "lang": "Castellano",
+    "login":{
+        "id_employee":"Employee ID",
+        "pass_employee": "Password"
+    },
+    "dashboard":{
+        "no_assigment":"Not assigned",
+        "worker1": "Worked #1",
+        "done": "Done"
+    }
+}

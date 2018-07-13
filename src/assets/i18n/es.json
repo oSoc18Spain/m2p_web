@@ -1,0 +1,12 @@
+{
+    "lang": "English",
+    "login":{
+        "id_employee":"Identificador de empleado",
+        "pass_employee": "Contraseña"
+    },
+    "dashboard":{
+        "no_assigment":"No asignados",
+        "worker1": "Trabajador #1",
+        "done": "Hecho"
+    }
+}

@@ -20,21 +20,21 @@ export class DashboardComponent implements OnInit {
   event_list: Event[] = [
     {
       title:"Evento 1",
-      description: "Es una descripcioin",
+      description: "Es una descripción",
       status:"pending",
       time: new Date(),
       id: 22
     },
     {
       title:"Evento 2",
-      description: "Es una descripcion",
+      description: "Es una descripción",
       status:"pending",
       time: new Date(),
       id: 23
     },
     {
       title:"Evento 2",
-      description: "Es una descripcion",
+      description: "Es una descripción",
       status:"pending",
       time: new Date(),
       id: 23
@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
   worker1: Event[] = [
     {
       title:"Evento 5",
-      description: "Es una descripcioin",
+      description: "Es una descripción",
       status:"in_progress",
       time: new Date(),
       id: 29
@@ -52,14 +52,14 @@ export class DashboardComponent implements OnInit {
   done_list: Event[] = [
     {
       title:"Evento 3",
-      description: "Es una descripcioin",
+      description: "Es una descripción",
       status:"done",
       time: new Date(),
       id: 25
     },
     {
       title:"Evento 4",
-      description: "Es una descripcioin",
+      description: "Es una descripción",
       status:"done",
       time: new Date(),
       id: 27
