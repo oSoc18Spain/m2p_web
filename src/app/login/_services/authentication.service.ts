@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { AppComponent } from '../../app.component'
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     constructor(private http: HttpClient) { }
 
     login(username: string, password: string) {
+        AppComponent.isLogged = true;
         return this.http.post<any>('/api/authenticate', { username: username, password: password })
             .pipe(map((res:any) => {
                 // login successful if there's a jwt token in the response
@@ -18,6 +20,7 @@ export class AuthenticationService {
     }
 
     logout() {
+        AppComponent.isLogged = false;
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
     }

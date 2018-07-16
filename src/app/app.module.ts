@@ -20,6 +20,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 //translate
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -33,6 +34,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     DashboardComponent,
     FooterComponent,
     HomeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
