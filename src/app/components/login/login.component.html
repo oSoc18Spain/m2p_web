@@ -1,3 +1,5 @@
+<div class="degraded-bck"></div>
+<img src="./assets/img/lilly_bck.jpg" class="bck-lilly" alt="Factory of Lilly">
 <main>
   <div class="container__login" [style.background]="''">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
@@ -13,7 +15,7 @@
       <input type="password" formControlName="password" class="form-control" 
       [ngClass]="{ 'is-invalid': submitted && f.password.errors }" >
       <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-          <div *ngIf="f.password.errors.required" translate>login.password_is_required</div>
+        <div *ngIf="f.password.errors.required" translate>login.password_is_required</div>
       </div>
 
       <button [disabled]="loading" translate>access</button>
@@ -23,20 +25,4 @@
     </form>
   </div>
 </main>
-
-<style>
-  .container__login{
-    background: url('./assets/img/lilly_bck.jpg') no-repeat center center ;
-    background-size: 100% 100%;
-    min-height: 700px;
-    display: flex;
-    justify-content: center;
-  }
-  @media screen and (max-width: 992px){
-    .container__login{
-        min-height: 0;
-    }
-}
-</style>
-
 <app-footer></app-footer>

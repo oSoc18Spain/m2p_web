@@ -1,4 +1,31 @@
 /**************************  LOGIN FORM **************************/
+.degraded-bck{
+    width: 100%;
+    background: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 100%);
+    position: absolute;
+    top:0;
+    height: 25vh;
+    z-index: 0;
+}
+.bck-lilly{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: -7;
+    object-fit: cover;
+    filter: blur(4px);
+}
+.container__login{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 992px){
+    .container__login{
+        min-height: 0;
+    }
+}
 .container__login form{
     display: flex;
     flex-direction: column;
