@@ -89,7 +89,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     //Calculate the number of columns and it changes the CSS
     const ncolumns = this.datatable.columns.length;
-    document.getElementById('table').style.gridTemplateColumns = `repeat(${ncolumns}, 1fr)`;
+    document.getElementById('table').style.setProperty('gridTemplateColumns', `repeat(${ncolumns}, 1fr)`);
   }
 
 }
