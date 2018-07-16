@@ -6,13 +6,10 @@ import { MaterialModule } from './material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
-
-import { ReactiveFormsModule }    from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 // used to create fake backend
 import { fakeBackendProvider } from './login/_helpers';
 import { JwtInterceptor, ErrorInterceptor } from './login/_helpers';
-
-
 
 //Components
 import { AppComponent } from './app.component';
@@ -23,7 +20,11 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 
 //translate
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  HttpClientModule,
+  HttpClient,
+  HTTP_INTERCEPTORS
+} from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -34,7 +35,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     DashboardComponent,
     FooterComponent,
     HomeComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +60,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);

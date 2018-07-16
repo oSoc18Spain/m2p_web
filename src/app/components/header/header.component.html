@@ -2,8 +2,15 @@
   <div class="header__logo">
     <img src="./assets/img/logo_bg.png" alt="M2P logo">
   </div>
-  <button *ngIf="getWidthStatus() === 'large' && isLogged()" mat-raised-button color="primary" class="header__btn" (click)="logout()" translate><span translate>menu.logout</span></button>
-  <button *ngIf="getWidthStatus() === 'large'" mat-raised-button color="primary" class="header__btn" (click)="switchLanguage()"><span translate>lang</span></button>
+  <div class="pc-buttons">
+    <button *ngIf="getWidthStatus() === 'large' && isLogged()" mat-raised-button color="primary" class="header__btn" (click)="logout()"
+      translate>
+      <span translate>menu.logout</span>
+    </button>
+    <button *ngIf="getWidthStatus() === 'large'" mat-raised-button color="primary" class="header__btn" (click)="switchLanguage()">
+      <span translate>lang</span>
+    </button>
+  </div>
   <i *ngIf="showMenuIn.includes(getWidthStatus())" (click)="toggleMenu()" class="toggle-menu material-icons">menu</i>
 </header>
 
@@ -14,7 +21,8 @@
   <ul class="menu-options">
     <li class="view-lines" (click)="toggleMenu()" translate>menu.see_lines</li>
     <li (click)="switchLanguage()" (click)="toggleMenu()" translate>lang</li>
-    <li><a [routerLink]="['/login']" *ngIf="isLogged()" (click)="toggleMenu()" translate>menu.logout</a></li>
+    <li>
+      <a [routerLink]="['/login']" *ngIf="isLogged()" (click)="toggleMenu()" translate>menu.logout</a>
+    </li>
   </ul>
 </section>
-  

@@ -14,9 +14,11 @@ export class HomeComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.userService.getAll().pipe(first()).subscribe(users => { 
-      this.users = users; 
-    });
+    this.userService
+      .getAll()
+      .pipe(first())
+      .subscribe(users => {
+        this.users = users;
+      });
   }
-
 }
