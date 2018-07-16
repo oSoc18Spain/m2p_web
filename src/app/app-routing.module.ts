@@ -5,12 +5,14 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 
+import { AuthGuard } from './login/_guards';
+
 
 const routes: Routes = [
   { path: 'login',component: LoginComponent},
   { path: 'dashboard',component: DashboardComponent},
-  { path: 'home',component: HomeComponent},
-  { path: '**', redirectTo: '' }
+  { path: 'home',component: HomeComponent, canActivate: [AuthGuard]},
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({

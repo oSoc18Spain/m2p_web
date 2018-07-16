@@ -7,12 +7,20 @@ header{
     padding: 20px 30px;
 }
 .header__logo{
+    flex:1;
+}
+.header__logo img{
     width: calc(100vw - 70%);
 }
+
 .header__lang{
     text-transform: uppercase;
+    margin: 0 5px;
+    color:#fff;
 }
-
+.header__lang a{
+    text-decoration: none;
+}
 @media screen and (max-width: 992px){
     .header__logo{
         width: calc(100vw - 55%);
@@ -67,5 +75,6 @@ i{
 }
 .menu-options li{
     margin: 15px 0;
+    cursor: pointer;
 }
 /*********************** END MENU *****************************/

@@ -1,16 +1,20 @@
 <header>
-  <img src="./assets/img/logo_bg.png" alt="M2P logo" class="header__logo">
+  <div class="header__logo">
+    <img src="./assets/img/logo_bg.png" alt="M2P logo">
+  </div>
+  <button *ngIf="getWidthStatus() === 'large'" mat-raised-button color="primary" class="header__lang" (click)="logout()" translate><span translate>menu.logout</span></button>
   <button *ngIf="getWidthStatus() === 'large'" mat-raised-button color="primary" class="header__lang" (click)="switchLanguage()"><span translate>lang</span></button>
-  <i *ngIf="getWidthStatus() === 'small'" (click)="toggleMenu()" class="toggle-menu material-icons">menu</i>
+  <i *ngIf="showMenuIn.includes(getWidthStatus())" (click)="toggleMenu()" class="toggle-menu material-icons">menu</i>
 </header>
 
-<div (click)="toggleMenu()" *ngIf="isOpen" class="overlay-close"></div>
+<div (click)="toggleMenu()" *ngIf="isOpen && showMenuIn.includes(getWidthStatus())" class="overlay-close"></div>
 
-<section class="mobile-menu" id="mobile-menu" [ngClass]="{'mobile-menu__open':isOpen}">
+<section class="mobile-menu" *ngIf="showMenuIn.includes(getWidthStatus())" id="mobile-menu" [ngClass]="{'mobile-menu__open':isOpen}">
   <i class="material-icons close-menu" (click)="toggleMenu()">close</i>
   <ul class="menu-options">
     <li class="view-lines" translate>menu.see_lines</li>
     <li (click)="switchLanguage()" translate>lang</li>
+    <li><a [routerLink]="['/login']" translate>menu.logout</a></li>
   </ul>
 </section>
 

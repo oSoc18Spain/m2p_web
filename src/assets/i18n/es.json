@@ -3,7 +3,9 @@
     "login":{
         "id_employee":"Identificador de empleado",
         "pass_employee": "Contraseña",
-        "access": "Acceder"
+        "access": "Acceder",
+        "username_is_required": "El ID de empleado es obligatorio",
+        "password_is_required": "La contraseña es obligatoria"
     },
     "footer":{
         "contact_info":"Información de contacto:"
@@ -14,6 +16,7 @@
         "done": "Hecho"
     },
     "menu":{
-        "see_lines": "Ver líneas"
+        "see_lines": "Ver líneas",
+        "logout": "Desconectarse"
     }
 }

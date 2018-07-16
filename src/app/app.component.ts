@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // translate module
 import { TranslateService } from '@ngx-translate/core';
 
 // Material Components
 import {MatButtonModule} from '@angular/material/button';
-import { log } from 'util';
 
 @Component({
   selector: 'app-root',
@@ -20,8 +20,11 @@ export class AppComponent implements OnInit{
   private isOpen: Boolean = false;
   lang: string = 'es';
   
+  //Select which screen mobile menu will work. Medium is under 992px. 
+  showMenuIn = ['small','medium'];
+  
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, public router: Router) {
     translate.setDefaultLang(this.lang);
   }
 
@@ -36,7 +39,13 @@ export class AppComponent implements OnInit{
   }
 
   widthStatus = size => {
-    AppComponent.deviceWidth = size < 992 ? 'small' : 'large';    
+    if(size > 992){
+      AppComponent.deviceWidth = 'large';
+    }else if(size > 502){
+      AppComponent.deviceWidth = 'medium';
+    }else{
+      AppComponent.deviceWidth = 'small';
+    }  
   }
 
   getWidthStatus = () => {
@@ -44,12 +53,16 @@ export class AppComponent implements OnInit{
   }
 
   toggleMenu = () => {
-    console.log(this.isOpen);
-    
     this.isOpen = !this.isOpen;    
+  }
+
+  logout = () => {
+    this.router.navigate(['login']);
   }
 
   ngOnInit(){
     this.widthStatus(window.innerWidth);
   }
+
+  
 }

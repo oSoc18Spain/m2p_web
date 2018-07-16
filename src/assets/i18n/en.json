@@ -3,7 +3,9 @@
     "login":{
         "id_employee":"Employee ID",
         "pass_employee": "Password",
-        "access": "Access"
+        "access": "Access",
+        "username_is_required": "Username is required",
+        "password_is_required": "Password is required"
     },
     "footer":{
         "contact_info":"Contact info:"
@@ -14,6 +16,7 @@
         "done": "Done"
     },
     "menu":{
-        "see_lines": "See lines"
+        "see_lines": "See lines",
+        "logout": "Logout"
     }
 }
