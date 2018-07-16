@@ -26,6 +26,11 @@ export class MyLinesComponent implements OnInit {
       id: 3,
       name: 'Línea 3',
       n_alerts: 3
+    },
+    {
+      id: 4,
+      name: 'Línea 4',
+      n_alerts: 1
     }
   ];
   constructor() {}

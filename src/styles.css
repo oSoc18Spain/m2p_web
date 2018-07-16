@@ -7,6 +7,7 @@
   --main-red: #d80000;
   --dark-red: #910a18;
   --main-bck: rgba(219, 37, 37, .8);
+  --main-bck-hover: rgba(219, 37, 37, 1);
 }
 
 html,

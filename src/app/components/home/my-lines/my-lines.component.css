@@ -49,7 +49,22 @@ aside {
   border-radius: 0 0 4px 4px;
   background: var(--main-bck);
   color: #fff;
+}
+
+.my-lines__list ul {
+  margin: 0;
+  font-size: 14px;
+  padding-bottom: 15px;
+  list-style-type: none;
   padding-left: 20px;
+  overflow: auto;
+  max-height: 500px;
+}
+
+@media screen and (max-width:992px) {
+  .my-lines__list ul {
+    max-height: 200px;
+  }
 }
 
 .my-lines__title {
@@ -58,14 +73,7 @@ aside {
   font-weight: 700;
   font-size: 16px;
   padding: 10px 0;
-}
-
-.my-lines__list ul {
-  margin: 0;
-  font-size: 14px;
-  padding-left: 4px;
-  padding-bottom: 15px;
-  list-style-type: none;
+  padding-left: 20px;
 }
 
 .my-lines__lines {
@@ -74,11 +82,22 @@ aside {
   align-items: center;
   width: calc(100% - 15px);
   cursor: pointer;
+  padding: 10px 0;
+  transition: .3s all ease;
+}
+
+.my-lines__lines:hover {
+  background: var(--main-bck-hover);
+}
+
+.my-lines__lines:not(:last-child) {
+  border-bottom: 1px solid rgba(215, 215, 215, .3);
 }
 
 .my-lines__name {
   flex: 1;
   padding-top: 2px;
+  padding-left: 5px;
 }
 
 .my-lines__name {
