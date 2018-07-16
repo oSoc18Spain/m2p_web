@@ -24,5 +24,48 @@ header{
         width: calc(100vw - 40%);
     }
 }
-
 /*************************** END HEADER *****************************/
+
+/*************************** MENU *****************************/
+i{
+    cursor: pointer;
+    padding: 15px;
+}
+.overlay-close{
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0,0,0,.8);
+    top:0;
+}
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    left:100vw;
+    width: calc(100vw - 30%);
+    height: 100vh;
+    background: var(--main-red);
+    transition: .3s all ease;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    z-index: 1000;
+}
+.mobile-menu__open{
+    left:30%;
+}
+
+.mobile-menu .close-menu{
+    position: absolute;
+    right: 0;
+}
+.menu-options{
+    margin-top: 60px;
+    list-style: none;    
+}
+.menu-options li{
+    margin: 15px 0;
+}
+/*********************** END MENU *****************************/

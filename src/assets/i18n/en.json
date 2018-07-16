@@ -2,11 +2,18 @@
     "lang": "Castellano",
     "login":{
         "id_employee":"Employee ID",
-        "pass_employee": "Password"
+        "pass_employee": "Password",
+        "access": "Access"
+    },
+    "footer":{
+        "contact_info":"Contact info:"
     },
     "dashboard":{
         "no_assigment":"Not assigned",
         "worker1": "Worked #1",
         "done": "Done"
+    },
+    "menu":{
+        "see_lines": "See lines"
     }
 }

@@ -2,11 +2,18 @@
     "lang": "English",
     "login":{
         "id_employee":"Identificador de empleado",
-        "pass_employee": "Contraseña"
+        "pass_employee": "Contraseña",
+        "access": "Acceder"
+    },
+    "footer":{
+        "contact_info":"Información de contacto:"
     },
     "dashboard":{
         "no_assigment":"No asignados",
         "worker1": "Trabajador #1",
         "done": "Hecho"
+    },
+    "menu":{
+        "see_lines": "Ver líneas"
     }
 }
