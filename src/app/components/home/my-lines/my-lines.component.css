@@ -1,0 +1,104 @@
+/****************************  ASIDE  ****************************/
+
+aside {
+  z-index: 10;
+  max-width: 250px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width:992px) {
+  aside {
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: calc(100vw - 30px);
+  }
+}
+
+.my-lines__add {
+  border-radius: 4px 4px 0 0;
+  background-color: rgba(255, 255, 255, .75);
+  color: var(--dark-red);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 17px;
+  z-index: 10;
+  cursor: pointer;
+  transition: .3s all ease;
+}
+
+.my-lines__add:hover {
+  background-color: rgba(255, 255, 255, .95);
+}
+
+.my-lines__add i {
+  padding: 2px;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: var(--dark-red);
+  color: #fff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.my-lines__list {
+  border-radius: 0 0 4px 4px;
+  background: var(--main-bck);
+  color: #fff;
+  padding-left: 20px;
+}
+
+.my-lines__title {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.my-lines__list ul {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-bottom: 15px;
+  list-style-type: none;
+}
+
+.my-lines__lines {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 15px);
+  cursor: pointer;
+}
+
+.my-lines__name {
+  flex: 1;
+  padding-top: 2px;
+}
+
+.my-lines__name {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.my-lines__alerts {
+  border: 2px solid var(--dark-red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  background: #fff;
+  color: #222;
+  margin-right: 10px;
+}
+
+/**************************  END ASIDE  **************************/

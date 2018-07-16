@@ -7,7 +7,12 @@
     "username_is_required": "Employee ID is required",
     "password_is_required": "Password is required",
     "wrong_user_or_pass": "Employee ID or password is incorrect"
-
+  },
+  "home": {
+    "my_lines": {
+      "add_lines": "Add lines",
+      "my_lines": "My lines"
+    }
   },
   "footer": {
     "contact_info": "Contact info:"

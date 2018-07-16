@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { MyLinesComponent } from './components/home/my-lines/my-lines.component';
 import { HeaderComponent } from './components/header/header.component';
 
 //translate
@@ -32,10 +33,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
   declarations: [
     AppComponent,
     LoginComponent,
+    HeaderComponent,
     DashboardComponent,
     FooterComponent,
     HomeComponent,
-    HeaderComponent
+    MyLinesComponent
   ],
   imports: [
     BrowserModule,

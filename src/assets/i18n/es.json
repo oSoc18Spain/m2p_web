@@ -8,6 +8,12 @@
     "password_is_required": "La contraseña es obligatoria",
     "wrong_user_or_pass": "El ID de empleado o la contraseña son incorrectos"
   },
+  "home": {
+    "my_lines": {
+      "add_lines": "Añadir líneas",
+      "my_lines": "Mis líneas"
+    }
+  },
   "footer": {
     "contact_info": "Información de contacto:"
   },
