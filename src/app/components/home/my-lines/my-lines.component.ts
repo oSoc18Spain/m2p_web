@@ -9,7 +9,7 @@ import { Line } from '../../../models';
 })
 export class MyLinesComponent implements OnInit {
   currentLines: Line[];
-  lines: number[];
+  lines: number[] = [];
   my_lines_id: number[] = [];
   showLinesToSubscribe: boolean = false;
   needsToUpdate: boolean = false;
@@ -18,9 +18,24 @@ export class MyLinesComponent implements OnInit {
   ngOnInit() {
     this.getLines();
     this.getSubscriptionsLines();
+    this.setAllLines();
   }
 
-  toogleLinesToSubscribe = () => {
+  setAllLines = () => {
+    if (this.currentLines != undefined && this.currentLines != undefined) {
+      this.my_lines_id = this.currentLines.map(e => e.id);
+      this.needsToUpdate = false;
+    }
+  };
+  toggleCheck = id => {
+    this.my_lines_id.indexOf(id) < 0
+      ? this.my_lines_id.push(id)
+      : this.my_lines_id.splice(this.my_lines_id.indexOf(id), 1);
+    this.needsToUpdate = true;
+  };
+
+  toogleLinesToSubscribe = (deleteChanges?: boolean) => {
+    if (deleteChanges) this.setAllLines();
     this.showLinesToSubscribe = !this.showLinesToSubscribe;
   };
 
@@ -34,18 +49,6 @@ export class MyLinesComponent implements OnInit {
     });
   };
 
-  setMyLines = () => {
-    this.my_lines_id = this.currentLines.map(l => l.id);
-  };
-
-  updateLines = id => {
-    this.my_lines_id.indexOf(id) < 0
-      ? this.my_lines_id.push(id)
-      : this.my_lines_id.splice(this.my_lines_id.indexOf(id), 1);
-    console.log(this.my_lines_id);
-    this.needsToUpdate = true;
-  };
-
   getSubscriptionsLines = () => {
     this.api.getJSON('/api/my_lines').subscribe((data: any) => {
       //fake info
@@ -54,7 +57,6 @@ export class MyLinesComponent implements OnInit {
       //end fake info
 
       this.currentLines = data;
-      this.setMyLines();
     });
   };
 

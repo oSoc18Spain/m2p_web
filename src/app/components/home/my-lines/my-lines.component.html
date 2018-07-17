@@ -1,20 +1,20 @@
 <aside>
   <div class="my-lines">
-    <div class="my-lines__add" (click)="toogleLinesToSubscribe()">
+    <div class="my-lines__add" (click)="setAllLines(); toogleLinesToSubscribe()">
       <h3 translate>home.lines.add_lines</h3>
       <i class="material-icons">add</i>
     </div>
     <div class="modify-subscription-lines" [ngClass]="{'show-lines-to-subscribe': showLinesToSubscribe}">
       <div class="modify-subscription-lines__list">
-        <div class="lines-to-subscribe" *ngFor="let line of lines">
-          <input type="checkbox" id="{{line}}" (click)="updateLines(line)" [attr.checked]="my_lines_id.includes(line) ? 'checked' : null">
+        <div class="lines-to-subscribe" *ngFor="let line of lines" (click)="toggleCheck(line)">
+          <input type="checkbox" value="{{line}}" name="{{line}}" [attr.checked]="my_lines_id.includes(line) ? 'checked' : null" />
           <label for="{{line}}">
             <span></span> Línea {{line}}
           </label>
         </div>
       </div>
       <div class="update-lines">
-        <button class="btn cancel" (click)="toogleLinesToSubscribe()" translate>home.lines.cancel</button>
+        <button class="btn cancel" (click)="toogleLinesToSubscribe(true)" translate>home.lines.cancel</button>
         <button class="btn save-changes" [attr.disabled]="needsToUpdate ? null: 'disabled'" translate>home.lines.save_changes</button>
       </div>
     </div>
