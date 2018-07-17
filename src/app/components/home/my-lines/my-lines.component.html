@@ -1,22 +1,28 @@
 <aside>
   <div class="my-lines">
-    <div class="my-lines__add">
-      <h3 translate>home.my_lines.add_lines</h3>
+    <div class="my-lines__add" (click)="toogleLinesToSubscribe()">
+      <h3 translate>home.lines.add_lines</h3>
       <i class="material-icons">add</i>
     </div>
-    <div class="modify-subscription-lines">
+    <div class="modify-subscription-lines" [ngClass]="{'show-lines-to-subscribe': showLinesToSubscribe}">
       <div class="lines-to-subscribe" *ngFor="let line of lines">
-        <input type="checkbox" id="{{line.id}}">
-        <label for="{{line.id}}">Línea {{line.id}}</label>
+        <input type="checkbox" id="{{line}}">
+        <label for="{{line}}">
+          <span></span> Línea {{line}}</label>
+      </div>
+      <div class="update-lines">
+        <button class="btn cancel" (click)="toogleLinesToSubscribe()" translate>home.lines.cancel</button>
+        <button class="btn save-changes" translate>home.lines.save_changes</button>
       </div>
     </div>
   </div>
 
   <div class="my-lines__list">
-    <h4 class="my-lines__title" translate>home.my_lines.my_lines</h4>
+    <h4 class="my-lines__title" translate>home.lines.my_lines</h4>
     <ul>
       <li *ngFor="let line of currentLines" class="my-lines__lines" (click)="showInfoLines(line.id)">
-        <span class="my-lines__name">{{line.name}}</span>
+        <span class="my-lines__name">
+          <span translate>home.lines.line</span> {{line.id}}</span>
         <div *ngIf="line.n_alerts != 0" class="my-lines__alerts">{{line.n_alerts}}</div>
         <div class="material-icons">close</div>
       </li>

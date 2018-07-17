@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DashboardService } from './dashboard.service';
+import { ConnectApiServices } from '../../connect-api.service';
 import { Datatable } from '../../models';
-import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,14 +8,12 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  SERVER: string = environment.server;
-  PORT: number = environment.port;
   datatable: Datatable = {
     status: 0,
     columns: []
   };
 
-  constructor(private dashboard: DashboardService) {}
+  constructor(private api: ConnectApiServices) {}
 
   ngOnInit() {
     this.getDashboardSubscription();
@@ -31,10 +28,14 @@ export class DashboardComponent implements OnInit {
   };
 
   getDashboardSubscription = () => {
-    this.dashboard.getDashboardJSON().subscribe((data: Datatable) => {
+    this.api.getJSON('/api/dashboard').subscribe((data: any) => {
+      //fake info
+      //data: Datatable
+      data = data.dashboard;
+      //end fake info
       if (data.status !== 200) {
         throw new Error(
-          `Couldn't connect to the API Server at ${this.SERVER}:${this.PORT}`
+          `Couldn't connect to the API Server at ${this.api.getServer()}:${this.api.getPort()}`
         );
       } else {
         data.columns.map(e => {

@@ -1,0 +1,5 @@
+{
+  "/api/dashboard": "/api",
+  "/api/lines": "/api",
+  "/api/my_lines": "/api"
+}
