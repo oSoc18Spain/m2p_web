@@ -1,6 +1,8 @@
 <main class="table" id="table">
   <div class="column" *ngFor="let column of datatable.columns">
-    <div class="title"><span translate>dashboard.{{column.name}}</span></div>
+    <div class="title">
+      <span translate>dashboard.{{column.name}}</span>
+    </div>
     <div class="event__list">
       <div *ngFor="let card of column.event_list" class="event__card event__{{card.status}}">
         <div class="event__header">
@@ -13,7 +15,8 @@
         </div>
         <div class="event__metadata">
           <div class="event__number_machine">
-            #<span>{{card.id}}</span>
+            #
+            <span>{{card.id}}</span>
           </div>
           <div class="event__time">
             {{card.time | date:'hh:mm:ss' }}

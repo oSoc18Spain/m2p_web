@@ -1,80 +1,92 @@
-/**************************  LOGIN FORM **************************/
-.degraded-bck{
-    width: 100%;
-    background: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,.8) 100%);
-    position: absolute;
-    top:0;
-    height: 25vh;
-    z-index: 0;
-}
-.bck-lilly{
-    position: absolute;
-    top:0;
-    width: 100%;
-    height: 100%;
-    z-index: -7;
-    object-fit: cover;
-    filter: blur(4px);
-}
-.container__login{
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-}
-@media screen and (max-width: 992px){
-    .container__login{
-        min-height: 0;
-    }
-}
-.container__login form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--main-bck);
-    border-radius: 5px;
-    border: 7px solid  rgba(219, 37, 37, .95);
-    width: 250px;
-    height: 300px;
-    margin: 50px 40vw 50px 0;
-    color: #fff;
-    z-index: 10;
+/**************************  BACKGROUND  **************************/
+
+.degraded-bck {
+  width: 100%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .8) 100%);
+  position: absolute;
+  top: 0;
+  height: 25vh;
+  z-index: 0;
 }
 
-label{
-    margin-top: 20px;
-    margin-bottom: 10px;
+.bck-lilly {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -7;
+  object-fit: cover;
+  filter: blur(4px);
+}
+
+/************************** END BACKGROUND  **************************/
+
+/**************************  LOGIN FORM **************************/
+
+.container__login {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+  .container__login {
+    min-height: 0;
+  }
+}
+
+.container__login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bck);
+  border-radius: 5px;
+  border: 7px solid rgba(219, 37, 37, .95);
+  width: 250px;
+  height: 300px;
+  margin: 50px 40vw 50px 0;
+  color: #fff;
+  z-index: 10;
+}
+
+label {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 input[type="text"],
-input[type="password"]{
-    height: 30px;
-    width: calc(100% - 50px);
-    margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: none;
-    border: none;
-    padding-left: 5px;
+input[type="password"] {
+  height: 30px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+  padding-left: 5px;
 }
 
-button{
-    font-size: 14px;
-    margin-top: 30px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    color:#111;
-    background: #f8f8f8;
-    text-transform: capitalize;
-    box-shadow: none;
-    border:none;
-    cursor: pointer;
+button {
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #111;
+  background: #f8f8f8;
+  text-transform: capitalize;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
 }
-button:hover{
-    background: #c0c0c0;
+
+button:hover {
+  background: #c0c0c0;
 }
-@media screen and (max-width: 992px){
-    .container__login form{
-        margin-right: 0;
-    }
+
+@media screen and (max-width: 992px) {
+  .container__login form {
+    margin-right: 0;
+  }
 }
+
 /*************************** END LOGIN *****************************/

@@ -1,22 +1,29 @@
 {
-    "lang": "English",
-    "login":{
-        "id_employee":"Identificador de empleado",
-        "pass_employee": "Contraseña",
-        "access": "Acceder",
-        "username_is_required": "El ID de empleado es obligatorio",
-        "password_is_required": "La contraseña es obligatoria"
-    },
-    "footer":{
-        "contact_info":"Información de contacto:"
-    },
-    "dashboard":{
-        "no_assigment":"No asignados",
-        "worker1": "Trabajador #1",
-        "done": "Hecho"
-    },
-    "menu":{
-        "see_lines": "Ver líneas",
-        "logout": "Desconectarse"
+  "lang": "English",
+  "login": {
+    "id_employee": "Identificador de empleado",
+    "pass_employee": "Contraseña",
+    "access": "Acceder",
+    "username_is_required": "El ID de empleado es obligatorio",
+    "password_is_required": "La contraseña es obligatoria",
+    "wrong_user_or_pass": "El ID de empleado o la contraseña son incorrectos"
+  },
+  "home": {
+    "my_lines": {
+      "add_lines": "Añadir líneas",
+      "my_lines": "Mis líneas"
     }
+  },
+  "footer": {
+    "contact_info": "Información de contacto:"
+  },
+  "dashboard": {
+    "no_assigment": "No asignados",
+    "worker1": "Trabajador #1",
+    "done": "Hecho"
+  },
+  "menu": {
+    "see_lines": "Ver líneas",
+    "logout": "Desconectarse"
+  }
 }

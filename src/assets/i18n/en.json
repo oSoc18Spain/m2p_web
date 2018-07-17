@@ -1,22 +1,29 @@
 {
-    "lang": "Castellano",
-    "login":{
-        "id_employee":"Employee ID",
-        "pass_employee": "Password",
-        "access": "Access",
-        "username_is_required": "Username is required",
-        "password_is_required": "Password is required"
-    },
-    "footer":{
-        "contact_info":"Contact info:"
-    },
-    "dashboard":{
-        "no_assigment":"Not assigned",
-        "worker1": "Worked #1",
-        "done": "Done"
-    },
-    "menu":{
-        "see_lines": "See lines",
-        "logout": "Logout"
+  "lang": "Castellano",
+  "login": {
+    "id_employee": "Employee ID",
+    "pass_employee": "Password",
+    "access": "Access",
+    "username_is_required": "Employee ID is required",
+    "password_is_required": "Password is required",
+    "wrong_user_or_pass": "Employee ID or password is incorrect"
+  },
+  "home": {
+    "my_lines": {
+      "add_lines": "Add lines",
+      "my_lines": "My lines"
     }
+  },
+  "footer": {
+    "contact_info": "Contact info:"
+  },
+  "dashboard": {
+    "no_assigment": "Not assigned",
+    "worker1": "Worked #1",
+    "done": "Done"
+  },
+  "menu": {
+    "see_lines": "See lines",
+    "logout": "Logout"
+  }
 }
