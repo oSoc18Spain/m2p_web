@@ -15,6 +15,8 @@ aside {
   }
 }
 
+/* title */
+
 .my-lines__add {
   border-radius: 4px 4px 0 0;
   background-color: rgba(255, 255, 255, .75);
@@ -45,6 +47,14 @@ aside {
   justify-content: center;
 }
 
+.modify-subscription-lines{
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  max-width: 250px; 
+}
+
+/* end title */
 .my-lines__list {
   border-radius: 0 0 4px 4px;
   background: var(--main-bck);

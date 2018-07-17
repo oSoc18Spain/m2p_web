@@ -1,5 +1,5 @@
 <main class="table" id="table">
-  <div class="column" *ngFor="let column of datatable.columns">
+  <div class="column" *ngFor="let column of getColumns()">
     <div class="title">
       <span translate>dashboard.{{column.name}}</span>
     </div>
@@ -9,8 +9,8 @@
           <div class="event__title">
             {{card.title}}
           </div>
-          <div class="event__description">
-            {{card.description}}
+          <div class="event__type">
+            {{card.type}}
           </div>
         </div>
         <div class="event__metadata">

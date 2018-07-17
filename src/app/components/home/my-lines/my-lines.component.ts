@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 interface Line {
   id: number;
   name: string;
-  n_alerts: number;
+  n_alerts?: number;
 }
 @Component({
   selector: 'app-my-lines',
@@ -12,6 +12,32 @@ interface Line {
 })
 export class MyLinesComponent implements OnInit {
   lines: Line[] = [
+    {
+      id: 1,
+      name: 'Línea 1'
+    },
+    {
+      id: 2,
+      name: 'Línea 2'
+    },
+    {
+      id: 3,
+      name: 'Línea 3'
+    },
+    {
+      id: 4,
+      name: 'Línea 4'
+    },
+    {
+      id: 5,
+      name: 'Línea 5'
+    },
+    {
+      id: 6,
+      name: 'Línea 6'
+    }
+  ]
+  currentLines: Line[] = [
     {
       id: 1,
       name: 'Línea 1',

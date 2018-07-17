@@ -57,7 +57,7 @@
   font-weight: 700;
 }
 
-.event__description {
+.event__type {
   text-transform: uppercase;
   color: #555;
   font-size: 12px;
