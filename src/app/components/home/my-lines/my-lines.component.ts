@@ -20,8 +20,6 @@ export class MyLinesComponent implements OnInit {
   }
 
   toogleLinesToSubscribe = () => {
-    console.log(this.showLinesToSubscribe);
-
     this.showLinesToSubscribe = !this.showLinesToSubscribe;
   };
 

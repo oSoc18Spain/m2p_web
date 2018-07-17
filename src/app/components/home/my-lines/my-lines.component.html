@@ -5,14 +5,17 @@
       <i class="material-icons">add</i>
     </div>
     <div class="modify-subscription-lines" [ngClass]="{'show-lines-to-subscribe': showLinesToSubscribe}">
-      <div class="lines-to-subscribe" *ngFor="let line of lines">
-        <input type="checkbox" id="{{line}}">
-        <label for="{{line}}">
-          <span></span> Línea {{line}}</label>
+      <div class="modify-subscription-lines__list">
+        <div class="lines-to-subscribe" *ngFor="let line of lines">
+          <input type="checkbox" id="{{line}}">
+          <label for="{{line}}" translate="">
+            <span></span> Línea {{line}}
+          </label>
+        </div>
       </div>
       <div class="update-lines">
         <button class="btn cancel" (click)="toogleLinesToSubscribe()" translate>home.lines.cancel</button>
-        <button class="btn save-changes" translate>home.lines.save_changes</button>
+        <button class="btn save-changes" disabled translate>home.lines.save_changes</button>
       </div>
     </div>
   </div>
