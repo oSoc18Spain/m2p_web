@@ -12,7 +12,7 @@ export class MyLinesComponent implements OnInit {
   lines: number[];
   my_lines_id: number[] = [];
   showLinesToSubscribe: boolean = false;
-
+  needsToUpdate: boolean = false;
   constructor(private api: ConnectApiServices) {}
 
   ngOnInit() {
@@ -36,6 +36,14 @@ export class MyLinesComponent implements OnInit {
 
   setMyLines = () => {
     this.my_lines_id = this.currentLines.map(l => l.id);
+  };
+
+  updateLines = id => {
+    this.my_lines_id.indexOf(id) < 0
+      ? this.my_lines_id.push(id)
+      : this.my_lines_id.splice(this.my_lines_id.indexOf(id), 1);
+    console.log(this.my_lines_id);
+    this.needsToUpdate = true;
   };
 
   getSubscriptionsLines = () => {
