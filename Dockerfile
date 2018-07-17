@@ -1,7 +1,7 @@
-FROM node:carbon
+FROM node:carbon-alpine
 
 MAINTAINER maximogarciamntez@gmail.com
-
+    
 WORKDIR /m2p/frontend
 
 COPY package*.json ./
