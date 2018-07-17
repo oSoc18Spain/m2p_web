@@ -7,8 +7,8 @@
     <div class="modify-subscription-lines" [ngClass]="{'show-lines-to-subscribe': showLinesToSubscribe}">
       <div class="modify-subscription-lines__list">
         <div class="lines-to-subscribe" *ngFor="let line of lines">
-          <input type="checkbox" id="{{line}}">
-          <label for="{{line}}" translate="">
+          <input type="checkbox" id="{{line}}" [attr.checked]="my_lines_id.includes(line) ? 'checked' : null">
+          <label for="{{line}}">
             <span></span> Línea {{line}}
           </label>
         </div>

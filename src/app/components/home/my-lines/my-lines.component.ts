@@ -10,28 +10,18 @@ import { Line } from '../../../models';
 export class MyLinesComponent implements OnInit {
   currentLines: Line[];
   lines: number[];
-
+  my_lines_id: number[] = [];
   showLinesToSubscribe: boolean = false;
+
   constructor(private api: ConnectApiServices) {}
 
   ngOnInit() {
-    this.getSubscriptionsLines();
     this.getLines();
+    this.getSubscriptionsLines();
   }
 
   toogleLinesToSubscribe = () => {
     this.showLinesToSubscribe = !this.showLinesToSubscribe;
-  };
-
-  getSubscriptionsLines = () => {
-    this.api.getJSON('/api/my_lines').subscribe((data: any) => {
-      //fake info
-      //data: Subscription
-      data = data.my_lines.lines_subscribed;
-      //end fake info
-
-      this.currentLines = data;
-    });
   };
 
   getLines = () => {
@@ -43,6 +33,23 @@ export class MyLinesComponent implements OnInit {
       this.lines = data;
     });
   };
+
+  setMyLines = () => {
+    this.my_lines_id = this.currentLines.map(l => l.id);
+  };
+
+  getSubscriptionsLines = () => {
+    this.api.getJSON('/api/my_lines').subscribe((data: any) => {
+      //fake info
+      //data: Subscription
+      data = data.my_lines.lines_subscribed;
+      //end fake info
+
+      this.currentLines = data;
+      this.setMyLines();
+    });
+  };
+
   showInfoLines = id => {
     console.log(`click: ${id}`);
   };
