@@ -1,0 +1,56 @@
+{
+  "api": {
+    "dashboard": {
+      "status": 200,
+      "columns": [{
+          "name": "no_assigment",
+          "event_list": [{
+              "title": "Evento 1",
+              "type": "manual",
+              "status": "pending",
+              "timeInSeconds": 1531851891,
+              "id": 1
+            },
+            {
+              "title": "Evento 2",
+              "type": "manual",
+              "status": "pending",
+              "timeInSeconds": 1531851891,
+              "id": 2
+            }
+          ]
+        },
+        {
+          "name": "worker1",
+          "event_list": [{
+            "title": "Evento 5",
+            "type": "automatic",
+            "status": "in_progress",
+            "timeInSeconds": 1531851891,
+            "id": 87
+          }]
+        },
+        {
+          "name": "worker2",
+          "event_list": [{
+            "title": "Evento 6",
+            "type": "automatic",
+            "status": "in_progress",
+            "timeInSeconds": 1531851891,
+            "id": 8
+          }]
+        },
+        {
+          "name": "done",
+          "event_list": [{
+            "title": "Evento 7",
+            "type": "automatic",
+            "status": "done",
+            "timeInSeconds": 1531851891,
+            "id": 8
+          }]
+        }
+      ]
+    }
+  }
+}
