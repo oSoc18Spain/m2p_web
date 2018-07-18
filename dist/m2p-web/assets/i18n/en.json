@@ -1,0 +1,32 @@
+{
+  "lang": "Castellano",
+  "login": {
+    "id_employee": "Employee ID",
+    "pass_employee": "Password",
+    "access": "Access",
+    "id_employee_is_required": "Employee ID is required",
+    "password_is_required": "Password is required",
+    "wrong_user_or_pass": "Employee ID or password is incorrect"
+  },
+  "home": {
+    "lines": {
+      "add_lines": "Add lines",
+      "my_lines": "My lines",
+      "line": "Line",
+      "cancel": "Cancel",
+      "save_changes": "Save changes"
+    }
+  },
+  "footer": {
+    "contact_info": "Contact info:"
+  },
+  "dashboard": {
+    "no_assigment": "Not assigned",
+    "worker1": "Worked #1",
+    "done": "Done"
+  },
+  "menu": {
+    "see_lines": "See lines",
+    "logout": "Logout"
+  }
+}
