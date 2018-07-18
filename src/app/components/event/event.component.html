@@ -1,0 +1,19 @@
+<div class="event__card event__card__{{card.status}}">
+<div class="event__header">
+    <div class="event__title">
+      {{card.title}}
+    </div>
+    <div class="event__type">
+      {{card.type}}
+    </div>
+  </div>
+  <div class="event__metadata">
+    <div class="event__number_machine">
+      #
+      <span>{{card.id}}</span>
+    </div>
+    <div class="event__time">
+      {{card.time | date:'hh:mm:ss' }}
+    </div>
+  </div>
+</div>

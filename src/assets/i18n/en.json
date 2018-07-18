@@ -14,7 +14,8 @@
       "my_lines": "My lines",
       "line": "Line",
       "cancel": "Cancel",
-      "save_changes": "Save changes"
+      "save_changes": "Save changes",
+      "role": "Role: "
     }
   },
   "footer": {

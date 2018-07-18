@@ -8,14 +8,14 @@
               "title": "Evento 1",
               "type": "manual",
               "status": "pending",
-              "timeInSeconds": 1531851891,
+              "timeInSeconds": 1531920664969,
               "id": 1
             },
             {
               "title": "Evento 2",
               "type": "manual",
               "status": "pending",
-              "timeInSeconds": 1531851891,
+              "timeInSeconds": 1531920664969,
               "id": 2
             }
           ]
@@ -36,7 +36,7 @@
             "title": "Evento 6",
             "type": "automatic",
             "status": "in_progress",
-            "timeInSeconds": 1531851891,
+            "timeInSeconds": 1531920664969,
             "id": 8
           }]
         },
@@ -46,7 +46,7 @@
             "title": "Evento 7",
             "type": "automatic",
             "status": "done",
-            "timeInSeconds": 1531851891,
+            "timeInSeconds": 1531920664969,
             "id": 8
           }]
         }
@@ -75,10 +75,10 @@
         "not_assigned":[
           {
             "machine_id": 12,
-            "title": "Se ha roto",//cambiado por description
+            "title": "Se ha roto",
             "status":"pending",
-            "type": "manual",//nuevo
-            "timeInSeconds": 1531851891//nuevo
+            "type": "manual",
+            "timeInSeconds": 1531920664969
           }
         ],
         "in_progress":[{}]
