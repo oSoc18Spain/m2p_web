@@ -9,16 +9,18 @@ import { UserService } from '../../login/_services';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  users: User[] = [];
+  users: User[] =[];
 
   constructor(private userService: UserService) {}
 
   ngOnInit() {
+    
     this.userService
-      .getAll()
+      .getUserInfo()
       .pipe(first())
       .subscribe(users => {
-        this.users = users;
+        this.users = users;        
       });
+
   }
 }
