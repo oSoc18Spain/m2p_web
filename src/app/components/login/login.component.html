@@ -3,11 +3,11 @@
 <main>
   <div class="container__login" [style.background]="''">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <label for="username" translate>login.id_employee</label>
-      <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+      <label for="id_employee" translate>login.id_employee</label>
+      <input type="text" formControlName="id_employee" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id_employee.errors }">
 
-      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-        <div *ngIf="f.username.errors.required" translate>login.username_is_required</div>
+      <div *ngIf="submitted && f.id_employee.errors" class="invalid-feedback">
+        <div *ngIf="f.id_employee.errors.required" translate>login.id_employee_is_required</div>
       </div>
 
       <label for="password" translate>login.pass_employee</label>
@@ -19,7 +19,7 @@
       <button [disabled]="loading" translate>access</button>
       <img *ngIf="loading" src="./assets/loading.gif" />
 
-      <div *ngIf="error" class="alert alert-danger" translate="">login.{{error}}</div>
+      <div *ngIf="error" translate>login.{{error}}</div>
     </form>
   </div>
 </main>

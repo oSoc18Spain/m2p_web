@@ -56,11 +56,11 @@
     "my_lines": {
       "id_employee": 1,
       "lines_subscribed": [{
-          "id": 2,
+          "id": 5,
           "n_alerts": 12
         },
         {
-          "id": 1,
+          "id": 4,
           "n_alerts": 0
         },
         {

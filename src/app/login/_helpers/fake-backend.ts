@@ -18,12 +18,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    let testUser = {
-      id: 1,
-      username: 'test',
-      password: 'test',
-      firstName: 'Test',
-      lastName: 'User'
+    let user = {
+      id_employee: '1',
+      password: 'test'
     };
 
     // wrap in delayed observable to simulate server api call
@@ -37,8 +34,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
               request.method === 'POST'
             ) {
               if (
-                request.body.username === testUser.username &&
-                request.body.password === testUser.password
+                request.body.id_employee === user.id_employee &&
+                request.body.password === user.password
               ) {
                 // if login details are valid return 200 OK with a fake jwt token
                 return of(
@@ -62,7 +59,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
               if (
                 request.headers.get('Authorization') === 'Bearer fake-jwt-token'
               ) {
-                return of(new HttpResponse({ status: 200, body: [testUser] }));
+                return of(new HttpResponse({ status: 200, body: [user] }));
               } else {
                 // return 401 not authorised if token is null or invalid
                 return throwError({ error: { message: 'Unauthorised' } });

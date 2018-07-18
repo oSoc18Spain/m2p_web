@@ -4,14 +4,17 @@
     "id_employee": "Identificador de empleado",
     "pass_employee": "Contraseña",
     "access": "Acceder",
-    "username_is_required": "El ID de empleado es obligatorio",
+    "id_employee_is_required": "El ID de empleado es obligatorio",
     "password_is_required": "La contraseña es obligatoria",
     "wrong_user_or_pass": "El ID de empleado o la contraseña son incorrectos"
   },
   "home": {
-    "my_lines": {
+    "lines": {
       "add_lines": "Añadir líneas",
-      "my_lines": "Mis líneas"
+      "my_lines": "Mis líneas",
+      "line": "Línea",
+      "cancel": "Cancelar",
+      "save_changes": "Guradar cambios"
     }
   },
   "footer": {
