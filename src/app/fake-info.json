@@ -75,8 +75,10 @@
         "not_assigned":[
           {
             "machine_id": 12,
-            "desciption": "Se ha roto",
-            "status":"pending"
+            "title": "Se ha roto",//cambiado por description
+            "status":"pending",
+            "type": "manual",//nuevo
+            "timeInSeconds": 1531851891//nuevo
           }
         ],
         "in_progress":[{}]
