@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      id_employee: ['', Validators.required],
       password: ['', Validators.required]
     });
 
@@ -45,13 +45,13 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.loginForm.invalid) {
+    if (this.loginForm.invalid) {      
       return;
     }
 
     this.loading = true;
     this.authenticationService
-      .login(this.f.username.value, this.f.password.value)
+      .login(this.f.id_employee.value, this.f.password.value)
       .pipe(first())
       .subscribe(
         data => {

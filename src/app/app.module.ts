@@ -18,6 +18,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { MyLinesComponent } from './components/home/my-lines/my-lines.component';
+import { LineInfoComponent } from './components/home/line-info/line-info.component';
 import { HeaderComponent } from './components/header/header.component';
 
 //translate
@@ -37,7 +38,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     DashboardComponent,
     FooterComponent,
     HomeComponent,
-    MyLinesComponent
+    MyLinesComponent,
+    LineInfoComponent
   ],
   imports: [
     BrowserModule,

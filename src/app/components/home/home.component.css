@@ -20,3 +20,13 @@
 }
 
 /************************** END BACKGROUND  **************************/
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width:992px) {
+  .container{
+    flex-direction: column;
+  }
+}

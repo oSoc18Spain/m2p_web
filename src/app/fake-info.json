@@ -56,11 +56,11 @@
     "my_lines": {
       "id_employee": 1,
       "lines_subscribed": [{
-          "id": 2,
+          "id": 5,
           "n_alerts": 12
         },
         {
-          "id": 1,
+          "id": 4,
           "n_alerts": 0
         },
         {
@@ -68,6 +68,21 @@
           "n_alerts": 3
         }
       ]
+    },
+    "event":{
+      "status":200,
+      "body": {
+        "not_assigned":[
+          {
+            "machine_id": 12,
+            "title": "Se ha roto",//cambiado por description
+            "status":"pending",
+            "type": "manual",//nuevo
+            "timeInSeconds": 1531851891//nuevo
+          }
+        ],
+        "in_progress":[{}]
+      }
     }
   }
 }

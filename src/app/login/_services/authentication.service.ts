@@ -7,21 +7,21 @@ import { AppComponent } from '../../app.component';
 export class AuthenticationService {
   constructor(private http: HttpClient) {}
 
-  login(username: string, password: string) {
-    AppComponent.isLogged = true;
+  login(id_employee: string, password: string) {
     return this.http
       .post<any>('/api/authenticate', {
-        username: username,
+        id_employee: id_employee,
         password: password
       })
       .pipe(
         map((res: any) => {
           // login successful if there's a jwt token in the response
           if (res && res.token) {
-            // store username and jwt token in local storage to keep user logged in between page refreshes
+            AppComponent.isLogged = true;
+            // store id_employee and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem(
               'currentUser',
-              JSON.stringify({ username, token: res.token })
+              JSON.stringify({ id_employee, token: res.token })
             );
           }
         })
