@@ -25,6 +25,8 @@ export class DashboardComponent implements OnInit {
     document
       .getElementById('table')
       .style.setProperty('grid-template-columns', `repeat(${ncolumns}, 1fr)`);
+      console.log(this.datatable);
+      
   };
 
   getDashboardSubscription = () => {
@@ -39,7 +41,9 @@ export class DashboardComponent implements OnInit {
         );
       } else {
         data.columns.map(e => {
-          e.time = new Date(e.timeInSeconds);
+          e.event_list.map(ee => {
+            ee.time = new Date(ee.timeInSeconds);
+          })
         });
         this.datatable = { ...data };
         this.changeColumns();

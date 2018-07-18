@@ -15,6 +15,7 @@ import { JwtInterceptor, ErrorInterceptor } from './login/_helpers';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EventComponent } from './components/event.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { MyLinesComponent } from './components/home/my-lines/my-lines.component';
