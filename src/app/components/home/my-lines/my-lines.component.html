@@ -33,7 +33,10 @@
   </div>
 
   <div class="add-new-event">
-    <a class="btn" translate>
+    <a class="btn" translate *ngIf="currentUrl === 'create-event'" [routerLink]="['/home']">
+      home.lines.see_lines
+    </a>
+    <a class="btn" translate *ngIf="currentUrl !== 'create-event'" [routerLink]="['/create-event']">
       home.lines.create_manual_event
     </a>
   </div>

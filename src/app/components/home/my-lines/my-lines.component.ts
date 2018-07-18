@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ConnectApiServices } from '../../../connect-api.service';
 import { Line } from '../../../models';
 
@@ -13,8 +14,11 @@ export class MyLinesComponent implements OnInit {
   my_lines_id: number[] = [];
   showLinesToSubscribe: boolean = false;
   needsToUpdate: boolean = false;
+  currentUrl: string;
 
-  constructor(private api: ConnectApiServices) {}
+  constructor(private api: ConnectApiServices, private route: Router) {
+    this.currentUrl = this.route.url.substring(1);
+  }
 
   ngOnInit() {
     this.getLines();

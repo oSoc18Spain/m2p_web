@@ -2,5 +2,6 @@
 <img src="./assets/img/lilly_bck.jpg" class="bck-lilly" alt="Factory of Lilly">
 <div class="container" style="display: flex;">
   <app-my-lines></app-my-lines>
-  <app-line-info style="flex:1"></app-line-info>
+  <app-line-info style="flex:1" *ngIf="currentUrl === 'home'"></app-line-info>
+  <app-create-event-form style="flex:1" *ngIf="currentUrl === 'create-event'"></app-create-event-form>
 </div>

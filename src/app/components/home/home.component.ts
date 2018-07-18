@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 import { User } from '../../models';
 import { UserService } from '../../login/_services';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,8 +12,11 @@ import { UserService } from '../../login/_services';
 })
 export class HomeComponent implements OnInit {
   users: User[] = [];
+  currentUrl: string;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private route: Router) {
+    this.currentUrl = this.route.url.substring(1);
+  }
 
   ngOnInit() {
     this.userService
