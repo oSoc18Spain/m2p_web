@@ -68,6 +68,19 @@
           "n_alerts": 3
         }
       ]
+    },
+    "event":{
+      "status":200,
+      "body": {
+        "not_assigned":[
+          {
+            "machine_id": 12,
+            "desciption": "Se ha roto",
+            "status":"pending"
+          }
+        ],
+        "in_progress":[{}]
+      }
     }
   }
 }

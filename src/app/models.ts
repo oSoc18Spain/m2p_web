@@ -31,7 +31,15 @@ export interface Line {
   id: number;
   n_alerts: number;
 }
-export class User {
+export class LoginUser {
   id_employee: string;
   password: string;
+}
+export class LoggedUser{
+  status: number;
+  body: User
+}
+export class User {
+  id_employee: string;
+  role: string; 
 }

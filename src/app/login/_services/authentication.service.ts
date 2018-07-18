@@ -8,7 +8,6 @@ export class AuthenticationService {
   constructor(private http: HttpClient) {}
 
   login(id_employee: string, password: string) {
-    AppComponent.isLogged = true;
     return this.http
       .post<any>('/api/authenticate', {
         id_employee: id_employee,
@@ -18,6 +17,7 @@ export class AuthenticationService {
         map((res: any) => {
           // login successful if there's a jwt token in the response
           if (res && res.token) {
+            AppComponent.isLogged = true;
             // store id_employee and jwt token in local storage to keep user logged in between page refreshes
             localStorage.setItem(
               'currentUser',

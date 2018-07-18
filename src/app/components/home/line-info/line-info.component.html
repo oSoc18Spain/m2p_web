@@ -5,10 +5,30 @@
   <div class="user-info">
     <h4>Información de usuario</h4>
     <h6>
-      ID: <span class="id">xxx</span>
+      <span class="id" translate>id</span>
+      <span class="id-number">xxx</span>
     </h6>
     <h6>
-      <span class="role">{{users.role}}</span>: <span class="id">xxx</span>
+      <span class="role" translate>role</span>
+      <span class="role-type">{{users.role}}</span>
     </h6>
   </div>
+  <main>
+    <h2>Línea 1</h2>
+    <nav>
+      <ul>
+        <li translate>information</li>
+        <li translate>warnings</li>
+      </ul>
+    </nav>
+    <div class="information">
+      <h4 class="events-type__title">Sin asignar</h4>
+      <div class="table">
+        <div class="headers">
+          <div class="header__machine">Máquina</div>
+          <div class="header__machine">Nombre</div>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
