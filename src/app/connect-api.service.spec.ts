@@ -9,7 +9,10 @@ describe('ConnectApiService', () => {
     });
   });
 
-  it('should be created', inject([ConnectApiService], (service: ConnectApiService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should be created', inject(
+    [ConnectApiService],
+    (service: ConnectApiService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 });

@@ -8,7 +8,11 @@ export interface Event {
 }
 export interface Datatable {
   status: number;
-  columns: Event[];
+  columns: Column[];
+}
+export interface Column {
+  name: string;
+  event_list: Event[];
 }
 export interface AddEvent {
   id_task: number;
@@ -35,11 +39,11 @@ export class LoginUser {
   id_employee: string;
   password: string;
 }
-export class LoggedUser{
+export class LoggedUser {
   status: number;
-  body: User
+  body: User;
 }
 export class User {
   id_employee: string;
-  role: string; 
+  role: string;
 }

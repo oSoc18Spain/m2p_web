@@ -69,19 +69,17 @@
         }
       ]
     },
-    "event":{
-      "status":200,
+    "event": {
+      "status": 200,
       "body": {
-        "not_assigned":[
-          {
-            "machine_id": 12,
-            "title": "Se ha roto",
-            "status":"pending",
-            "type": "manual",
-            "timeInSeconds": 1531920664969
-          }
-        ],
-        "in_progress":[{}]
+        "not_assigned": [{
+          "machine_id": 12,
+          "title": "Se ha roto",
+          "status": "pending",
+          "type": "manual",
+          "timeInSeconds": 1531920664969
+        }],
+        "in_progress": [{}]
       }
     }
   }

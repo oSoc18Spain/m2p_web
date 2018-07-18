@@ -8,9 +8,8 @@ describe('LineInfoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LineInfoComponent ]
-    })
-    .compileComponents();
+      declarations: [LineInfoComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -4,9 +4,9 @@
       <span translate>dashboard.{{column.name}}</span>
     </div>
     <div class="event__list">
-      <div *ngFor="let card of column.event_list" class="" [card]="card">
-        
-      </div>
+      <app-event *ngFor="let card of column.event_list" [card]="card">
+
+      </app-event>
     </div>
   </div>
 </main>

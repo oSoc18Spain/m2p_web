@@ -11,8 +11,8 @@ import { User } from '../../../models';
 })
 export class LineInfoComponent implements OnInit {
   users: User = {
-    'id_employee': '0',
-    'role':''
+    id_employee: '0',
+    role: ''
   };
   constructor(private userService: UserService) {
     this.userService
@@ -21,11 +21,7 @@ export class LineInfoComponent implements OnInit {
       .subscribe(users => {
         this.users = users[0];
       });
-    
-  }
-  
-  ngOnInit() {
-
   }
 
+  ngOnInit() {}
 }
