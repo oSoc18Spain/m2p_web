@@ -1,40 +1,26 @@
 <div class="grid-container">
-  <div class="add-new-event">
-    <a class="btn">
-      Crear evento manual
-    </a>
-  </div>
-  <div class="user-info">
-    <div class="user-info__container">
-      <h4>Información de usuario</h4>
-      <h6>
-        <span class="id">ID: </span>
-        <span class="id-number">{{users.id_employee}}</span>
-      </h6>
-      <h6>
-        <span class="role" translate>home.lines.role</span>
-        <span class="role-type">{{users.role}}</span>
-      </h6>
-    </div>
-  </div>
   <main>
     <h2>
-      <span class="you-selected">Has seleccionado: </span>
-      <span class="line-selected">Línea 1</span>
+      <span class="you-selected" translate>home.info_line.you_selected</span>
+      <span class="line-selected">
+        <span translate>home.lines.line</span> 1</span>
     </h2>
     <nav>
       <ul class="tabs">
-        <li class="active" translate>information</li>
-        <li translate>warnings</li>
+        <li class="active" translate>home.info_line.information</li>
+        <li translate>home.info_line.notifications</li>
       </ul>
     </nav>
     <div class="information">
-      <h4>Sin asignar</h4>
-      <div class="table">
-        <div class="headers">
-          <div class="header__machine">Máquina</div>
-          <div class="header__machine">Nombre</div>
-        </div>
+      <h4 translate>home.info_line.not_assigned</h4>
+      <div class="event-list event__not-assigned">
+        <app-event *ngFor="let event of not_assigned" [event]="event">
+        </app-event>
+      </div>
+      <h4 translate>home.info_line.assigned_to_me</h4>
+      <div class="event-list event__assigned-to-me ">
+        <app-event *ngFor="let event of assigned_to_me" [event]="event">
+        </app-event>
       </div>
     </div>
   </main>

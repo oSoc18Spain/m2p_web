@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { Router, NavigationEnd } from '@angular/router';
+import { UserService } from '../../login/_services';
+import { User } from '../../models';
 
 import { AppComponent } from '../../app.component';
 
 // translate module
 import { TranslateService } from '@ngx-translate/core';
-
-// Material Components
-import { MatButtonModule } from '@angular/material/button';
-import { log } from 'util';
 
 @Component({
   selector: 'app-header',
@@ -18,12 +17,29 @@ import { log } from 'util';
 export class HeaderComponent implements OnInit {
   isOpen: Boolean = false;
   lang: string = 'es';
-
+  users: User = {
+    id_employee: '0',
+    role: ''
+  };
   //Select which screen mobile menu will work. Medium is under 992px.
   showMenuIn = ['small', 'medium'];
 
-  constructor(private translate: TranslateService, public router: Router) {
+  constructor(
+    private translate: TranslateService,
+    public router: Router,
+    private userService: UserService
+  ) {
     translate.setDefaultLang(this.lang);
+    router.events.subscribe(val => {
+      if (AppComponent.isLogged) {
+        this.userService
+          .getUserInfo()
+          .pipe(first())
+          .subscribe(users => {
+            this.users = users[0];
+          });
+      }
+    });
   }
 
   ngOnInit() {}

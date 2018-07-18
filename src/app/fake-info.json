@@ -71,16 +71,52 @@
     },
     "event": {
       "status": 200,
-      "body": {
-        "not_assigned": [{
+      "body": [{
           "machine_id": 12,
           "title": "Se ha roto",
           "status": "pending",
           "type": "manual",
           "timeInSeconds": 1531920664969
-        }],
-        "in_progress": [{}]
-      }
+        }, {
+          "machine_id": 12,
+          "title": "Se ha roto mucho una máquina, por el calor",
+          "status": "pending",
+          "type": "manual",
+          "timeInSeconds": 1531920664969
+        }, {
+          "machine_id": 12,
+          "title": "Se ha roto",
+          "status": "pending",
+          "type": "manual",
+          "timeInSeconds": 1531920664969
+        }, {
+          "machine_id": 12,
+          "title": "Se ha roto",
+          "status": "pending",
+          "type": "manual",
+          "timeInSeconds": 1531920664969
+        }, {
+          "machine_id": 12,
+          "title": "Se ha roto",
+          "status": "pending",
+          "type": "manual",
+          "timeInSeconds": 1531920664969
+        },
+        {
+          "machine_id": 1,
+          "title": "Error!",
+          "status": "in_progress",
+          "type": "manual",
+          "timeInSeconds": 1531920664969
+        },
+        {
+          "machine_id": 2,
+          "title": "Error de la máquina!",
+          "status": "in_progress",
+          "type": "automatic",
+          "timeInSeconds": 1531920664969
+        }
+      ]
     }
   }
 }

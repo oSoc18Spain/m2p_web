@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { first } from 'rxjs/operators';
 
-import { UserService } from '../../../login/_services';
-import { User } from '../../../models';
+import { ConnectApiServices } from '../../../connect-api.service';
+import { TypesOfEvents } from '../../../models';
 
 @Component({
   selector: 'app-line-info',
@@ -10,18 +9,33 @@ import { User } from '../../../models';
   styleUrls: ['./line-info.component.css']
 })
 export class LineInfoComponent implements OnInit {
-  users: User = {
-    id_employee: '0',
-    role: ''
-  };
-  constructor(private userService: UserService) {
-    this.userService
-      .getUserInfo()
-      .pipe(first())
-      .subscribe(users => {
-        this.users = users[0];
-      });
+  not_assigned: TypesOfEvents[] = [];
+  assigned_to_me: TypesOfEvents[] = [];
+
+  constructor(private api: ConnectApiServices) {}
+
+  ngOnInit() {
+    this.getEvents();
   }
 
-  ngOnInit() {}
+  getEvents = () => {
+    this.api.getJSON('/api').subscribe((data: any) => {
+      //fake info
+      //data: EventsInLine
+      data = data.event;
+      //end fake info
+
+      if (data.status !== 200) {
+        throw new Error(
+          `Couldn't connect to the API Server at ${this.api.getServer()}:${this.api.getPort()}`
+        );
+      } else {
+        data.body.map(e => {
+          e.time = new Date(e.timeInSeconds);
+          if (e.status == 'pending') this.not_assigned.push(e);
+          if (e.status == 'in_progress') this.assigned_to_me.push(e);
+        });
+      }
+    });
+  };
 }

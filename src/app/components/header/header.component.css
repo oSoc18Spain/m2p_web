@@ -29,6 +29,19 @@ header {
   text-decoration: none;
 }
 
+.pc-buttons {
+  display: flex;
+}
+
+.user-info {
+  text-align: right;
+  background: rgba(255, 255, 255, .8);
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 6px 15px;
+}
+
 /*************************** END HEADER *****************************/
 
 /*************************** MENU *****************************/
@@ -54,7 +67,7 @@ i {
   left: 100vw;
   width: calc(100vw - 30%);
   height: 100vh;
-  background: var(--main-red);
+  background: var(--dark-red);
   transition: .3s all ease;
   color: #fff;
   font-size: 15px;
@@ -80,6 +93,19 @@ i {
 .menu-options li {
   margin: 15px 0;
   cursor: pointer;
+}
+
+.menu-options li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.user-info__mobile {
+  position: absolute;
+  bottom: 20px;
+  color: #f6f6f6;
+  padding-left: 40px;
+  font-size: 12px
 }
 
 /*********************** END MENU *****************************/

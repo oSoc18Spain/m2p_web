@@ -1,19 +1,19 @@
-<div class="event__card event__{{card.status}}">
+<div class="event__card event__{{event.status}}">
   <div class="event__header">
     <div class="event__title">
-      {{card.title}}
+      {{event.title}}
     </div>
     <div class="event__type">
-      {{card.type}}
+      {{event.type}}
     </div>
   </div>
   <div class="event__metadata">
     <div class="event__number_machine">
       #
-      <span>{{card.id}}</span>
+      <span>{{event.id}}</span>
     </div>
     <div class="event__time">
-      {{card.time | date:'hh:mm:ss' }}
+      {{event.time | date:'hh:mm:ss' }}
     </div>
   </div>
 </div>

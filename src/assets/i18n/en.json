@@ -15,7 +15,15 @@
       "line": "Line",
       "cancel": "Cancel",
       "save_changes": "Save changes",
-      "role": "Role: "
+      "role": "Role: ",
+      "create_manual_event": "Create manual event"
+    },
+    "info_line": {
+      "information": "Information",
+      "notifications": "Notifications",
+      "you_selected": "You selected: ",
+      "not_assigned": "Not assigned",
+      "assigned_to_me": "Assigned to me"
     }
   },
   "footer": {
@@ -28,6 +36,7 @@
   },
   "menu": {
     "see_lines": "See lines",
-    "logout": "Logout"
+    "logout": "Logout",
+    "role": "Rol: "
   }
 }

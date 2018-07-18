@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ConnectApiServices } from '../../connect-api.service';
-import { Datatable, Event } from '../../models';
+import { Datatable } from '../../models';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +8,6 @@ import { Datatable, Event } from '../../models';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  @Input() card: Event;
   datatable: Datatable = {
     status: 0,
     columns: []
@@ -26,7 +25,6 @@ export class DashboardComponent implements OnInit {
     document
       .getElementById('table')
       .style.setProperty('grid-template-columns', `repeat(${ncolumns}, 1fr)`);
-    console.log(this.datatable);
   };
 
   getDashboardSubscription = () => {

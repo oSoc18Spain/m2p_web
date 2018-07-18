@@ -15,7 +15,15 @@
       "line": "Línea",
       "cancel": "Cancelar",
       "save_changes": "Guardar cambios",
-      "role": "Rol: "
+      "role": "Rol: ",
+      "create_manual_event": "Crear evento manual"
+    },
+    "info_line": {
+      "information": "Información",
+      "notifications": "Notificaciones",
+      "you_selected": "Has seleccionado: ",
+      "not_assigned": "No asignados",
+      "assigned_to_me": "Asignados a mí"
     }
   },
   "footer": {
@@ -28,6 +36,7 @@
   },
   "menu": {
     "see_lines": "Ver líneas",
-    "logout": "Desconectarse"
+    "logout": "Desconectarse",
+    "role": "Rol: "
   }
 }

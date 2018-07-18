@@ -13,6 +13,7 @@ export class MyLinesComponent implements OnInit {
   my_lines_id: number[] = [];
   showLinesToSubscribe: boolean = false;
   needsToUpdate: boolean = false;
+
   constructor(private api: ConnectApiServices) {}
 
   ngOnInit() {
@@ -40,7 +41,8 @@ export class MyLinesComponent implements OnInit {
   };
 
   getLines = () => {
-    this.api.getJSON('/api/lines').subscribe((data: any) => {
+    //'/api/lines'
+    this.api.getJSON('/api').subscribe((data: any) => {
       //fake info
       //data: number[]
       data = data.lines;
@@ -50,7 +52,8 @@ export class MyLinesComponent implements OnInit {
   };
 
   getSubscriptionsLines = () => {
-    this.api.getJSON('/api/my_lines').subscribe((data: any) => {
+    //'/api/my_lines'
+    this.api.getJSON('/api').subscribe((data: any) => {
       //fake info
       //data: Subscription
       data = data.my_lines.lines_subscribed;

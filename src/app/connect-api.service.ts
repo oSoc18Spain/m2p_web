@@ -12,8 +12,6 @@ export class ConnectApiServices {
   constructor(private http: HttpClient) {}
 
   getJSON = (route: string) => {
-    console.log(`${this.SERVER}:${this.PORT}${route}`);
-
     return this.http.get(`${this.SERVER}:${this.PORT}${route}`);
   };
 

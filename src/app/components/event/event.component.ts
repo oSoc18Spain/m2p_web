@@ -6,11 +6,9 @@ import { Event } from '../../models';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-  @Input() card: Event;
+  @Input() event: Event;
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.card);
-  }
+  ngOnInit() {}
 }

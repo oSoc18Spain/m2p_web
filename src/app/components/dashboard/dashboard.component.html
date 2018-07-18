@@ -1,11 +1,12 @@
+<div class="degraded-bck"></div>
+<img src="./assets/img/lilly_bck.jpg" class="bck-lilly" alt="Factory of Lilly">
 <main class="table" id="table">
   <div class="column" *ngFor="let column of datatable.columns">
     <div class="title">
       <span translate>dashboard.{{column.name}}</span>
     </div>
     <div class="event__list">
-      <app-event *ngFor="let card of column.event_list" [card]="card">
-
+      <app-event *ngFor="let event of column.event_list" [event]="event">
       </app-event>
     </div>
   </div>

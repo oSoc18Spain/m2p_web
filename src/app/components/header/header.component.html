@@ -2,12 +2,21 @@
   <div class="header__logo">
     <img src="./assets/img/logo_bg.png" alt="M2P logo">
   </div>
-  <div class="pc-buttons">
-    <button *ngIf="getWidthStatus() === 'large' && isLogged()" mat-raised-button color="primary" class="header__btn" (click)="logout()"
-      translate>
+  <div class="pc-buttons" *ngIf="getWidthStatus() === 'large'">
+    <div class="user-info" *ngIf="isLogged()">
+      <div class="id">
+        <span>ID: </span>
+        <span>{{users.id_employee}}</span>
+      </div>
+      <div class="role">
+        <span translate>menu.role</span>
+        <span>{{users.role}}</span>
+      </div>
+    </div>
+    <button *ngIf="isLogged()" mat-raised-button color="primary" class="header__btn" (click)="logout()" translate>
       <span translate>menu.logout</span>
     </button>
-    <button *ngIf="getWidthStatus() === 'large'" mat-raised-button color="primary" class="header__btn" (click)="switchLanguage()">
+    <button mat-raised-button color="primary" class="header__btn" (click)="switchLanguage()">
       <span translate>lang</span>
     </button>
   </div>
@@ -25,4 +34,16 @@
       <a [routerLink]="['/login']" *ngIf="isLogged()" (click)="toggleMenu()" translate>menu.logout</a>
     </li>
   </ul>
+
+  <div class="user-info__mobile" *ngIf="isLogged()">
+
+    <div class="id">
+      <span>ID: </span>
+      <span>{{users.id_employee}}</span>
+    </div>
+    <div class="role">
+      <span translate>menu.role</span>
+      <span>{{users.role}}</span>
+    </div>
+  </div>
 </section>

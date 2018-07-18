@@ -6,6 +6,15 @@ export interface Event {
   timeInSeconds: number;
   id: number;
 }
+export interface EventsInLine {
+  status: number;
+  body: TypesOfEvents[];
+}
+export interface TypesOfEvents {
+  not_assigned?: Event[];
+  in_progress?: Event[];
+  done?: Event[];
+}
 export interface Datatable {
   status: number;
   columns: Column[];
