@@ -9,9 +9,12 @@
     "wrong_user_or_pass": "Employee ID or password is incorrect"
   },
   "home": {
-    "my_lines": {
+    "lines": {
       "add_lines": "Add lines",
-      "my_lines": "My lines"
+      "my_lines": "My lines",
+      "line": "Line",
+      "cancel": "Cancel",
+      "save_changes": "Save changes"
     }
   },
   "footer": {

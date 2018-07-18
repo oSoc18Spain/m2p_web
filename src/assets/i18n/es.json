@@ -9,9 +9,12 @@
     "wrong_user_or_pass": "El ID de empleado o la contraseña son incorrectos"
   },
   "home": {
-    "my_lines": {
+    "lines": {
       "add_lines": "Añadir líneas",
-      "my_lines": "Mis líneas"
+      "my_lines": "Mis líneas",
+      "line": "Línea",
+      "cancel": "Cancelar",
+      "save_changes": "Guardar cambios"
     }
   },
   "footer": {
