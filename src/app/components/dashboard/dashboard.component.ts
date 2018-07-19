@@ -28,12 +28,15 @@ export class DashboardComponent implements OnInit {
   };
 
   getDashboardSubscription = () => {
-    this.api.getJSON('/api/dashboard').subscribe((data: any) => {
+    ///api/dashboard
+    this.api.getJSON('/api').subscribe((data: any) => {
+      //fake
+      data = data.dashboard;
       if (data.status !== 200) {
         throw new Error(
           `Couldn't connect to the API Server at ${this.api.getServer()}:${this.api.getPort()}`
         );
-      } else {        
+      } else {
         data.columns.map(e => {
           e.time = new Date(e.timeInSeconds);
         });

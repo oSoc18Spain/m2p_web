@@ -1,4 +1,4 @@
-<div class="event__card event__{{event.status}}">
+<div class="event__card event__{{event.status}}" (click)="openModal(event.id)">
   <div class="event__header">
     <div class="event__title">
       {{event.title}}
@@ -14,6 +14,52 @@
     </div>
     <div class="event__time">
       {{event.time | date:'hh:mm:ss' }}
+    </div>
+  </div>
+</div>
+
+<div class="modal" [ngClass]="{'show-modal':modalOpen == event.id}">
+  <div class="close-modal" (click)="closeModal()"></div>
+  <div class="content_modal">
+    <div class="header">
+      <h2 class="event_title">
+        {{event.title}}
+      </h2>
+      <div class="right">
+        <span class="event_id">
+          ID: {{event.id}}
+        </span>
+        <div class="event_type">
+          {{event.type}}
+        </div>
+      </div>
+    </div>
+
+    <div class="table">
+      <div class="table_header">
+        <div class="date">Fecha</div>
+        <div class="message">Mensaje</div>
+        <div class="user">Usuario</div>
+      </div>
+      <div class="table_rows">
+        <div class="row_date">15/06/2018</div>
+        <div class="row_message">La máquina se rompió debido a su uso</div>
+        <div class="row_user"></div>
+      </div>
+      <div class="table_rows">
+        <div class="row_date">16/06/2018</div>
+        <div class="row_message">Cambiada la pieza que se rompió</div>
+        <div class="row_user">Mecánico 1</div>
+      </div>
+      <div class="table_rows">
+        <div class="row_date">16/06/2018</div>
+        <div class="row_message">Revisión del trabajo</div>
+        <div class="row_user">Mecánico 2</div>
+      </div>
+
+      <div class="current_status">
+        <span>Actualmente está siendo procesado por QA 4</span>
+      </div>
     </div>
   </div>
 </div>

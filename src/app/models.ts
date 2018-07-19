@@ -43,6 +43,8 @@ export interface Subscription {
 export interface Line {
   id: number;
   n_alerts: number;
+  lineChannelId: number;
+  type: string;
 }
 export class LoginUser {
   id_employee: string;

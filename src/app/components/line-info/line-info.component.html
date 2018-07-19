@@ -1,9 +1,8 @@
-
-<main>
+<main *ngIf="currentLine !== -1">
   <h2>
     <span class="you-selected" translate>home.info_line.you_selected</span>
     <span class="line-selected">
-      <span translate>home.lines.line</span> 1</span>
+      <span translate>home.lines.line</span> {{currentLine}}</span>
   </h2>
   <nav>
     <ul class="tabs">
@@ -23,4 +22,7 @@
       </app-event>
     </div>
   </div>
+</main>
+<main *ngIf="currentLine === -1">
+  <h2 translate>home.lines.select_line</h2>
 </main>

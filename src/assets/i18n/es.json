@@ -14,11 +14,12 @@
       "my_lines": "Mis líneas",
       "line": "Línea",
       "cancel": "Cancelar",
-      "save_changes": "Guardar cambios",
+      "done": "Finalizar",
       "role": "Rol: ",
       "create_manual_event": "Crear evento manual",
       "see_lines": "Ver líneas",
-      "machine": "Máquina"
+      "machine": "Máquina",
+      "select_line": "Selecciona una línea: "
     },
     "info_line": {
       "information": "Información",
@@ -41,14 +42,14 @@
     "logout": "Desconectarse",
     "role": "Rol: "
   },
-  "create_event":{
-    "select_line":"Selecciona una línea: ",
+  "create_event": {
+    "select_line": "Selecciona una línea: ",
     "select_line_alert": "Primero debes seleccionar una línea",
     "select_machine": "Selecciona una máquina",
     "select_task": "Selecciona una tarea",
     "select_an_option": "Selecciona una opción"
   },
-  "tasks":{
+  "tasks": {
     "clean": "Limpiar",
     "repare": "Reparar",
     "check": "Revisar"

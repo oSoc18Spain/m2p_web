@@ -63,7 +63,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
+    HeaderComponent,
+    MyLinesComponent,
     // provider used to create fake backend
     fakeBackendProvider
   ],
