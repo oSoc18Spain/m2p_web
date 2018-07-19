@@ -73,7 +73,7 @@ aside {
 @media screen and (max-width:992px) {
   .modify-subscription-lines {
     width: 100%;
-    max-width: calc(100vw - 70px);
+    max-width: calc(100vw - 30px);
   }
 }
 
