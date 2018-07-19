@@ -1,3 +1,39 @@
+/************************ TABLE NOTIFICATIONS ******************************/
+
+.notifications {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification {
+  padding: 10px 15px;
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.notification .time {
+  font-size: 12px;
+}
+
+.notification .message {
+  flex: 1;
+}
+
+.notification:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, .6);
+}
+
+.notification:nth-child(odd) {
+  background: rgba(243, 243, 243, 0.7);
+}
+
+.notification:nth-child(even) {
+  background: rgba(230, 230, 230, 0.7);
+}
+
+/************************ END TABLE ******************************/
+
 /************************ MODAL ******************************/
 
 .modal {
