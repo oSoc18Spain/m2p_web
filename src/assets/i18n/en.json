@@ -22,7 +22,7 @@
       "select_line": "Select a line: "
     },
     "info_line": {
-      "information": "Information",
+      "events": "Eventos",
       "notifications": "Notifications",
       "you_selected": "You selected: ",
       "not_assigned": "Not assigned",

@@ -18,6 +18,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EventComponent } from './components/event/event.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { LineEventsComponent } from './components/line-events/line-events.component';
+import { LineNotificationsComponent } from './components/line-notifications/line-notifications.component';
 import { MyLinesComponent } from './components/my-lines/my-lines.component';
 import { LineInfoComponent } from './components/line-info/line-info.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -41,6 +43,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     EventComponent,
     FooterComponent,
     HomeComponent,
+    LineEventsComponent,
+    LineNotificationsComponent,
     MyLinesComponent,
     LineInfoComponent,
     CreateEventFormComponent

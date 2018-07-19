@@ -22,7 +22,7 @@
       "select_line": "Selecciona una línea: "
     },
     "info_line": {
-      "information": "Información",
+      "events": "Eventos",
       "notifications": "Notificaciones",
       "you_selected": "Has seleccionado: ",
       "not_assigned": "No asignados",
