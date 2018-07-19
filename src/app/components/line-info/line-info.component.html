@@ -1,3 +1,7 @@
+<main *ngIf="currentLine === -1">
+  <h2 translate>home.lines.select_line</h2>
+</main>
+
 <main *ngIf="currentLine !== -1">
   <h2>
     <span class="you-selected" translate>home.info_line.you_selected</span>
@@ -6,23 +10,10 @@
   </h2>
   <nav>
     <ul class="tabs">
-      <li class="active" translate>home.info_line.information</li>
-      <li translate>home.info_line.notifications</li>
+      <li [ngClass]="{active: currentTab == 'events'}" (click)="changeTab('events')" translate>home.info_line.events</li>
+      <li [ngClass]="{active: currentTab == 'notification'}" (click)="changeTab('notification')" translate>home.info_line.notifications</li>
     </ul>
   </nav>
-  <div class="information">
-    <h4 translate>home.info_line.not_assigned</h4>
-    <div class="event-list event__not-assigned">
-      <app-event *ngFor="let event of not_assigned" [event]="event">
-      </app-event>
-    </div>
-    <h4 translate>home.info_line.assigned_to_me</h4>
-    <div class="event-list event__assigned-to-me ">
-      <app-event *ngFor="let event of assigned_to_me" [event]="event">
-      </app-event>
-    </div>
-  </div>
-</main>
-<main *ngIf="currentLine === -1">
-  <h2 translate>home.lines.select_line</h2>
+  <app-line-events *ngIf="currentTab == 'events'"></app-line-events>
+  <app-line-notifications *ngIf="currentTab == 'notification'"></app-line-notifications>
 </main>

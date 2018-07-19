@@ -15,14 +15,14 @@ header {
 
 .header__logo img {
   width: 100%;
-  z-index: 10;
+  z-index: 0;
 }
 
 .header__btn {
   text-transform: uppercase;
   margin: 0 5px;
   color: #fff;
-  z-index: 10;
+  z-index: 0;
 }
 
 .header__btn a {

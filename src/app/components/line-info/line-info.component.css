@@ -1,4 +1,4 @@
-main{
+main {
   width: calc(100% - 150px);
   margin-left: 50px;
   background: rgba(255, 255, 255, .85);
@@ -7,7 +7,7 @@ main{
 }
 
 @media screen and (max-width:992px) {
-  main{
+  main {
     width: calc(100vw - 80px);
     margin: 0 auto;
     margin-top: 20px;
@@ -56,15 +56,15 @@ main h2 {
 .tabs li {
   padding: 10px 15px;
   border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.tabs li:hover {
+  background: #c0c0c0;
 }
 
 .tabs li.active {
   background: var(--dark-red);
   color: #fff;
-}
-
-.event-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 5px;
 }
