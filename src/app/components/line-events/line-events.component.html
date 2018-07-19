@@ -1,10 +1,14 @@
 <div class="information">
-  <h4 translate>home.info_line.assigned_to_me</h4>
+  <h4 translate>home.info_line.assigned_to_me
+    <span>({{assigned_to_me.length}}):</span>
+  </h4>
   <div class="event-list event__assigned-to-me ">
     <app-event *ngFor="let event of assigned_to_me" [event]="event">
     </app-event>
   </div>
-  <h4 translate>home.info_line.not_assigned</h4>
+  <h4 translate>home.info_line.not_assigned
+    <span>({{not_assigned.length}}):</span>
+  </h4>
   <div class="event-list event__not-assigned">
     <app-event *ngFor="let event of not_assigned" [event]="event">
     </app-event>
