@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MyLinesComponent } from './components/home/my-lines/my-lines.component';
 import { LineInfoComponent } from './components/home/line-info/line-info.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CreateEventFormComponent } from './components/create-event-form/create-event-form.component';
 
 //translate
 import {
@@ -41,7 +42,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     FooterComponent,
     HomeComponent,
     MyLinesComponent,
-    LineInfoComponent
+    LineInfoComponent,
+    CreateEventFormComponent
   ],
   imports: [
     BrowserModule,

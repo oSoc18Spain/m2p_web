@@ -16,7 +16,8 @@
       "cancel": "Cancelar",
       "save_changes": "Guardar cambios",
       "role": "Rol: ",
-      "create_manual_event": "Crear evento manual"
+      "create_manual_event": "Crear evento manual",
+      "see_lines": "Ver líneas"
     },
     "info_line": {
       "information": "Información",

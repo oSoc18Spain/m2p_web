@@ -16,7 +16,8 @@
       "cancel": "Cancel",
       "save_changes": "Save changes",
       "role": "Role: ",
-      "create_manual_event": "Create manual event"
+      "create_manual_event": "Create manual event",
+      "see_lines": "See lines"
     },
     "info_line": {
       "information": "Information",

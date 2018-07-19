@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'create-event', component: HomeComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: 'login' }
 ];
 
