@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./line-notifications.component.css']
 })
 export class LineNotificationsComponent implements OnInit {
+  modalOpen: number = -1;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+  openModal = id => {
+    this.modalOpen = id;
+  };
+  closeModal = () => {
+    this.modalOpen = -1;
+  };
 }

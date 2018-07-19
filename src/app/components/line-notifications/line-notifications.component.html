@@ -1,3 +1,53 @@
-<p>
-  line-notifications works!
-</p>
+<div class="notifications">
+  <div class="notification" (click)="openModal(1)">
+    <div class="time">15/07/2018 | 20:32</div>
+    <div class="message">Te han asignado una tarea: "Revisar máquina 14 de la línea 3"</div>
+  </div>
+</div>
+
+
+<div class="modal" [ngClass]="{'show-modal':modalOpen == 1}">
+  <div class="close-modal" (click)="closeModal()"></div>
+  <div class="content_modal">
+    <div class="header">
+      <h2 class="event_title">
+        Revisar máquina 14 de la línea 3
+      </h2>
+      <div class="right">
+        <span class="event_id">
+          ID: 432
+        </span>
+        <div class="event_type">
+          MANUAL
+        </div>
+      </div>
+    </div>
+
+    <div class="table">
+      <div class="table_header">
+        <div class="date">Fecha</div>
+        <div class="message">Mensaje</div>
+        <div class="user">Usuario</div>
+      </div>
+      <div class="table_rows">
+        <div class="row_date">15/06/2018</div>
+        <div class="row_message">La máquina se rompió debido a su uso</div>
+        <div class="row_user"></div>
+      </div>
+      <div class="table_rows">
+        <div class="row_date">16/06/2018</div>
+        <div class="row_message">Cambiada la pieza que se rompió</div>
+        <div class="row_user">Mecánico 1</div>
+      </div>
+      <div class="table_rows">
+        <div class="row_date">16/06/2018</div>
+        <div class="row_message">Revisión del trabajo</div>
+        <div class="row_user">Mecánico 2</div>
+      </div>
+
+      <div class="current_status">
+        <span>Actualmente está siendo procesado por tí</span>
+      </div>
+    </div>
+  </div>
+</div>

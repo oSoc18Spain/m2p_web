@@ -7,15 +7,12 @@ import { Event } from '../../models';
 })
 export class EventComponent implements OnInit {
   @Input() event: Event;
-  modalOpen: number;
 
+  modalOpen: number;
   constructor() {}
 
   ngOnInit() {}
-
-  openModal = (id: number) => {
-    console.log(id);
-
+  openModal = id => {
     this.modalOpen = id;
   };
   closeModal = () => {
