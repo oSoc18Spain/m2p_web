@@ -2,25 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AppComponent } from '../../app.component';
-import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  
-  SERVER: string = environment.server;
-  PORT: number = environment.port;
-
   constructor(private http: HttpClient) {}
 
-  login(id_employee: string, password: string) {    
+  login(id_employee: string, password: string) {
     return this.http
-      .post<any>(`/api/authenticate`, {
+      .post<any>('/api/authenticate', {
         id_employee: id_employee,
         password: password
       })
       .pipe(
         map((res: any) => {
-          
           // login successful if there's a jwt token in the response
           if (res && res.token) {
             AppComponent.isLogged = true;

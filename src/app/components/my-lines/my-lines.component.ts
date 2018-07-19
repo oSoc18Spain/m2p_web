@@ -20,7 +20,7 @@ export class MyLinesComponent implements OnInit {
     this.currentUrl = this.route.url.substring(1);
   }
 
-  ngOnInit() {    
+  ngOnInit() {            
     this.getLines();
     this.getSubscriptionsLines();
     this.setAllLines();

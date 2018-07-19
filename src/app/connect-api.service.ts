@@ -14,10 +14,10 @@ export class ConnectApiServices {
 
   }
 
-  getJSON = (route: string) => {    
-    return this.http.get(`${this.SERVER}:${this.PORT}${route}`,{});
+  getJSON = (route: string) => {
+    return this.http.get(`${this.SERVER}:${this.PORT}${route}`);
   };
-
+  
   setInfo = (route:string, obj: any)=>{
     return this.http.post(`${this.SERVER}:${this.PORT}${route}`,obj)
   }
