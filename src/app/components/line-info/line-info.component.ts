@@ -11,7 +11,6 @@ import { CurrentLineService } from '../my-lines/current-line.service';
 export class LineInfoComponent implements OnInit {
   currentLine: number;
   currentTab: string = 'events';
-
   constructor(
     private myLines: MyLinesComponent,
     private currentLineService: CurrentLineService

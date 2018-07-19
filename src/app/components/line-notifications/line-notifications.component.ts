@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LineNotificationsComponent implements OnInit {
   modalOpen: number = -1;
+  modalTitle: string = '';
   constructor() {}
 
   ngOnInit() {}
-  openModal = id => {
+  openModal = (id, title) => {
+    this.modalTitle = title;
     this.modalOpen = id;
   };
   closeModal = () => {
