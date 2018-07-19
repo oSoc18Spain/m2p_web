@@ -1,5 +1,18 @@
 {
   "api": {
+    "tasks":[
+      {
+        "id":1,
+        "task": "clean"
+      },{
+        "id":2,
+        "task": "clean"
+      },{
+        "id":3  ,
+        "task": "repare"
+      }
+    ],
+    "machines":[4,534, 12],
     "dashboard": {
       "status": 200,
       "columns": [{

@@ -17,7 +17,8 @@
       "save_changes": "Save changes",
       "role": "Role: ",
       "create_manual_event": "Create manual event",
-      "see_lines": "See lines"
+      "see_lines": "See lines",
+      "machine": "Machine"
     },
     "info_line": {
       "information": "Information",
@@ -39,5 +40,17 @@
     "see_lines": "See lines",
     "logout": "Logout",
     "role": "Rol: "
+  },
+  "create_event":{
+    "select_line":"Select a line: ",
+    "select_line_alert": "First you must select a line",
+    "select_machine": "Select a machine",
+    "select_task": "Select a task",
+    "select_an_option": "Select an option"
+  },
+  "tasks":{
+    "clean": "Limpiar",
+    "repare": "Reparar",
+    "check": "Revisar"
   }
 }

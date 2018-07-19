@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ConnectApiServices } from '../../../connect-api.service';
-import { TypesOfEvents } from '../../../models';
+import { ConnectApiServices } from '../../connect-api.service';
+import { TypesOfEvents } from '../../models';
 
 @Component({
   selector: 'app-line-info',
@@ -15,20 +15,13 @@ export class LineInfoComponent implements OnInit {
   constructor(private api: ConnectApiServices) {}
 
   ngOnInit() {
-    this.getEvents();
+    //this.getEvents();
   }
 
   getEvents = () => {
-    this.api.getJSON('/api').subscribe((data: any) => {
-      //fake info
-      //data: EventsInLine
-      data = data.event;
-      //end fake info
-
+    this.api.getJSON('/api/lineschannel').subscribe((data: any) => {      
       if (data.status !== 200) {
-        throw new Error(
-          `Couldn't connect to the API Server at ${this.api.getServer()}:${this.api.getPort()}`
-        );
+        this.api.throwError(data.status)
       } else {
         data.body.map(e => {
           e.time = new Date(e.timeInSeconds);

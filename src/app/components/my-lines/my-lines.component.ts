@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ConnectApiServices } from '../../../connect-api.service';
-import { Line } from '../../../models';
-
+import { ConnectApiServices } from '../../connect-api.service';
+import { Line } from '../../models';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-my-lines',
   templateUrl: './my-lines.component.html',
@@ -16,11 +16,11 @@ export class MyLinesComponent implements OnInit {
   needsToUpdate: boolean = false;
   currentUrl: string;
 
-  constructor(private api: ConnectApiServices, private route: Router) {
+  constructor(private api: ConnectApiServices, private route: Router, private header: HeaderComponent) {
     this.currentUrl = this.route.url.substring(1);
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.getLines();
     this.getSubscriptionsLines();
     this.setAllLines();
@@ -35,7 +35,7 @@ export class MyLinesComponent implements OnInit {
   toggleCheck = id => {
     this.my_lines_id.indexOf(id) < 0
       ? this.my_lines_id.push(id)
-      : this.my_lines_id.splice(this.my_lines_id.indexOf(id), 1);
+      : this.my_lines_id.splice(this.my_lines_id.indexOf(id), 1);    
     this.needsToUpdate = true;
   };
 
@@ -44,14 +44,24 @@ export class MyLinesComponent implements OnInit {
     this.showLinesToSubscribe = !this.showLinesToSubscribe;
   };
 
+  updateMyLines = () => {
+    let obj = {
+      user_id: this.header.users.id_employee,
+      linneschannel_id: this.showLinesToSubscribe
+    }
+    console.log(obj);
+    
+    //this.api.setInfo('/api/subscriptiononlines',obj).subscribe((data: any) => {
+      //console.log(data);
+      
+    //});
+  }
+
   getLines = () => {
-    //'/api/lines'
-    this.api.getJSON('/api').subscribe((data: any) => {
-      //fake info
-      //data: number[]
-      data = data.lines;
-      //end fake info
-      this.lines = data;
+    this.api.getJSON('/api/lineschannel').subscribe((data: any) => {
+      data.map(e => {
+        this.lines.push(e.id);
+      })
     });
   };
 

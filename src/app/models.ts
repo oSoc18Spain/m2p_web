@@ -56,3 +56,7 @@ export class User {
   id_employee: string;
   role: string;
 }
+export class Tasks {
+  task: string;
+  id: number;
+}

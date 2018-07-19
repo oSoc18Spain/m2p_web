@@ -19,8 +19,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     let user = {
-      id_employee: '1',
-      password: 'test',
+      id_employee: 'Y987651',
+      password: 'abc987651',
       role: 'Mecánico'
     };
 
@@ -60,6 +60,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
               if (
                 request.headers.get('Authorization') === 'Bearer fake-jwt-token'
               ) {
+                console.log(user)
+
                 return of(new HttpResponse({ status: 200, body: [user] }));
               } else {
                 // return 401 not authorised if token is null or invalid

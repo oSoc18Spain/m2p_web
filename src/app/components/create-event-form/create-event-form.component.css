@@ -1,0 +1,45 @@
+main{
+    width: calc(100% - 150px);
+    margin-left: 50px;
+    background: rgba(255, 255, 255, .85);
+    border-radius: 4px;
+    padding: 25px;
+}
+
+@media screen and (max-width:992px) {
+    main{
+        width: calc(100vw - 80px);
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+form{
+    color: #111;
+}
+select{
+    padding: 10px 15px;
+    background: #d1d1d1;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+select option{
+    text-transform: capitalize;
+}
+
+.select-next-in-charge{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.select-next-in-charge input{
+    margin-right: 15px;
+}
+@media screen and (max-width:992px) {
+    .select-next-in-charge input:nth-child(2),.select-next-in-charge label:nth-child(2) {
+        margin-top: 15px;
+    }
+}

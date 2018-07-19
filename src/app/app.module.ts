@@ -18,8 +18,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EventComponent } from './components/event/event.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { MyLinesComponent } from './components/home/my-lines/my-lines.component';
-import { LineInfoComponent } from './components/home/line-info/line-info.component';
+import { MyLinesComponent } from './components/my-lines/my-lines.component';
+import { LineInfoComponent } from './components/line-info/line-info.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateEventFormComponent } from './components/create-event-form/create-event-form.component';
 

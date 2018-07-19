@@ -17,7 +17,8 @@
       "save_changes": "Guardar cambios",
       "role": "Rol: ",
       "create_manual_event": "Crear evento manual",
-      "see_lines": "Ver líneas"
+      "see_lines": "Ver líneas",
+      "machine": "Máquina"
     },
     "info_line": {
       "information": "Información",
@@ -39,5 +40,17 @@
     "see_lines": "Ver líneas",
     "logout": "Desconectarse",
     "role": "Rol: "
+  },
+  "create_event":{
+    "select_line":"Selecciona una línea: ",
+    "select_line_alert": "Primero debes seleccionar una línea",
+    "select_machine": "Selecciona una máquina",
+    "select_task": "Selecciona una tarea",
+    "select_an_option": "Selecciona una opción"
+  },
+  "tasks":{
+    "clean": "Limpiar",
+    "repare": "Reparar",
+    "check": "Revisar"
   }
 }

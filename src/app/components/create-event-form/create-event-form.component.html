@@ -1,1 +1,41 @@
-<h1>lksdafjlkfadsjklfadskjladsfkjlasfdkjlfjkla</h1>
+<main>
+    <h1>Crear evento</h1>
+    <!---->
+
+    <form action="">
+        <h4 translate>create_event.select_line</h4>
+        <select>
+            <option disabled selected value translate>create_event.select_an_option</option>
+            <option *ngFor="let line of lines"><span translate>home.lines.line</span> {{line}}</option>
+        </select>
+
+        <h4 translate>create_event.select_machine</h4>
+        <select>
+            <option *ngIf="machines.length > 0" disabled selected value translate>create_event.select_an_option</option>
+            <option *ngIf="machines.length === 0" disabled selected value translate>create_event.select_line_alert</option>
+            <option *ngFor="let id of machines"><span translate>home.lines.machine</span> {{id}}</option>
+        </select>
+
+        <h4 translate>create_event.select_task</h4>
+        <select>
+            <option disabled selected value translate>create_event.select_an_option</option>
+            <option *ngFor="let task of tasks" translate>tasks.{{task.task}}</option>
+        </select>
+        
+        <h4>Seleccionar destinatario:</h4>
+
+        <div class="select-next-in-charge">
+            <label for="assign-to-role">Asignar a un rol</label>
+            <input name="assign-to-role" type="checkbox">
+            <label for="assign-to-employee">Asignar a empleado</label>
+            <input name="assign-to-employee" type="checkbox">
+        </div>
+        
+        <select>
+            <option>Limpiar</option>
+            <option>Revisar trabajo</option>
+        </select> 
+
+
+    </form>
+</main>
