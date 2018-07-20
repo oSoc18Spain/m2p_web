@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  server: 'http://localhost',
-  port:8080
+  server: 'http://lilly.summerofcode.oeg-upm.net',
+  port:80
 };
 
 /*

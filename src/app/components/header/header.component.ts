@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit {
   };
   //Select which screen mobile menu will work. Medium is under 992px.
   showMenuIn = ['small', 'medium'];
+  id = ''; 
 
   constructor(
     private translate: TranslateService,
@@ -36,6 +37,7 @@ export class HeaderComponent implements OnInit {
           .getUserInfo()
           .pipe(first())
           .subscribe(users => {
+            this.id = users[0].id_employee;
             this.users = users[0];
           });
       }

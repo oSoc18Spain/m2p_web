@@ -70,7 +70,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     HeaderComponent,
     MyLinesComponent,
     // provider used to create fake backend
-    fakeBackendProvider
+    fakeBackendProvider,
+    DashboardComponent
   ],
   bootstrap: [AppComponent]
 })

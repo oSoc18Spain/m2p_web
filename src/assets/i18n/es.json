@@ -50,8 +50,10 @@
     "select_an_option": "Selecciona una opción"
   },
   "tasks": {
-    "clean": "Limpiar",
-    "repare": "Reparar",
-    "check": "Revisar"
+    "CLEAN": "Limpiar",
+    "CHECK": "Revisar",
+    "FIX": "Reparar",
+    "MAINTENANCE": "Mantenimiento",
+    "PREPARE": "Preparar"
   }
 }

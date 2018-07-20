@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConnectApiServices } from '../../connect-api.service';
+import { interval } from 'rxjs/observable/interval';
 import { Line } from '../../models';
 import { HeaderComponent } from '../header/header.component';
 import { CurrentLineService } from './current-line.service';
@@ -29,7 +30,9 @@ export class MyLinesComponent implements OnInit {
 
   ngOnInit() {
     this.getLines();
-    this.getSubscriptionsLines();
+    interval(1000).subscribe(() => this.getSubscriptionsLines());
+    
+    
     this.setAllLines();
   }
 
@@ -46,7 +49,8 @@ export class MyLinesComponent implements OnInit {
             return e.id === id;
           })
         )
-      : this.removeLine(id);
+      : this.currentLines.splice(
+        this.currentLines.findIndex(e => {return e.id == 4}),1);
     this.needsToUpdate = true;
   };
 
@@ -65,7 +69,7 @@ export class MyLinesComponent implements OnInit {
           this.currentLines.findIndex(e => {return e.id == 4}),1)
       }
     }));
-  }
+}
 
   toogleLinesToSubscribe = (deleteChanges?: boolean) => {
     if (deleteChanges) this.setAllLines();
@@ -74,47 +78,31 @@ export class MyLinesComponent implements OnInit {
 
   updateMyLines = () => {
     this.showLinesToSubscribe = false;
-    //this.currentLines = this.selectedLines;
 
     let obj = {
       user_id: this.header.users.id_employee,
       linneschannel_id: this.showLinesToSubscribe
     };
-
-    //this.api.setInfo('/api/subscriptiononlines',obj).subscribe((data: any) => {
-    //console.log(data);
-
-    //});
   };
 
   getLines = () => {
-    //'/api/lineschannel'
-    this.api.getJSON('/api').subscribe((data: any) => {
-      //Line[]
-      //Fake info
-      data = data.lines;
-      //end
+    this.api.getJSON('/api/lineschannel').subscribe((data: Line[]) => {
       this.lines = data;
     });
   };
 
-  getSubscriptionsLines = () => {
-    //'/api/my_lines'
-    this.api.getJSON('/api').subscribe((data: any) => {
-      //fake info
-      //data: Subscription
-      data = data.my_lines.lines_subscribed;
-      //end fake info
-
+  getSubscriptionsLines = () => {    
+    let id = this.header.id;
+    this.api.getJSON(`/api/mylineschannels/${id}`).subscribe((data: any) => {            
       let lines = [];
       let ids = data.map(e => e.id);
 
       this.lines.map(e => {
         if (ids.includes(e.id)) {
+          e.n_alerts = Math.round(Math.random() * 8)
           lines.push(e);
         }
       });
-
       this.currentLines = lines;
     });
   };

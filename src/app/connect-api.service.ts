@@ -14,8 +14,11 @@ export class ConnectApiServices {
 
   }
 
-  getJSON = (route: string) => {
-    return this.http.get(`${this.SERVER}:${this.PORT}${route}`);
+  getJSON = (route: string, fake?:boolean) => {
+    if(fake)
+      return this.http.get(`http://localhost:8080${route}`);
+    else
+      return this.http.get(`${this.SERVER}:${this.PORT}${route}`);
   };
   
   setInfo = (route:string, obj: any)=>{

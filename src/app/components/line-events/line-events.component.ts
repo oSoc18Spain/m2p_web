@@ -19,8 +19,10 @@ export class LineEventsComponent implements OnInit {
 
   getEvents = () => {
     //'/api/lineschannel'
-    this.api.getJSON('/api').subscribe((data: any) => {
-      //fake
+    this.api.getJSON('/api', true).subscribe((data: any) => {
+      //fakee
+      console.log(data);
+      
       data = data.event;
 
       if (data.status !== 200) {
