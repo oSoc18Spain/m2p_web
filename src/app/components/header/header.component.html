@@ -14,9 +14,11 @@
       </div>
     </div>
     <button *ngIf="isLogged()" mat-raised-button color="primary" class="header__btn" (click)="logout()" translate>
+      <i class="material-icons">power_settings_new</i>
       <span translate>menu.logout</span>
     </button>
     <button mat-raised-button color="primary" class="header__btn" (click)="switchLanguage()">
+      <i class="material-icons">language</i>
       <span translate>lang</span>
     </button>
   </div>
@@ -29,9 +31,14 @@
   <i class="material-icons close-menu" (click)="toggleMenu()">close</i>
   <ul class="menu-options">
     <li class="view-lines" (click)="toggleMenu()" translate>menu.see_lines</li>
-    <li (click)="switchLanguage()" (click)="toggleMenu()" translate>lang</li>
+    <li (click)="switchLanguage()" (click)="toggleMenu()">
+        <i class="material-icons">language</i>
+        <span translate>lang</span></li>
     <li>
-      <a [routerLink]="['/login']" *ngIf="isLogged()" (click)="toggleMenu()" translate>menu.logout</a>
+      <a [routerLink]="['/login']" *ngIf="isLogged()" (click)="toggleMenu()" >
+        <i class="material-icons">power_settings_new</i>
+        <span translate>menu.logout</span>
+        </a>
     </li>
   </ul>
 

@@ -23,8 +23,12 @@ header {
   margin: 0 5px;
   color: #fff;
   z-index: 0;
+  padding-left: 0;
 }
-
+.header__btn i {
+  font-size: 20px;
+  padding: 10px 15px;
+}
 .header__btn a {
   text-decoration: none;
 }
@@ -99,7 +103,9 @@ i {
   color: inherit;
   text-decoration: none;
 }
-
+.menu-options i{
+  font-size: 20px;
+}
 .user-info__mobile {
   position: absolute;
   bottom: 20px;

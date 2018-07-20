@@ -158,15 +158,26 @@
 }
 
 .current_status {
-  margin-top: 15px;
   background: var(--dark-red);
   color: #fff;
   text-align: center;
   font-style: italic;
   padding: 7px 12px;
-  width: 350px;
+  max-width: 350px;
   margin: 0 auto;
+  margin-top: 15px;
   border-radius: 4px;
+}
+
+.assign-to-me{
+  border-radius: 4px;
+  margin-top: 15px;
+  background:#c0c0c0;
+  color: #111;
+  text-align: center;
+  cursor: pointer;
+  padding: 7px 12px;
+  width: 150px;
 }
 
 /*********************** END MODAL *****************************/

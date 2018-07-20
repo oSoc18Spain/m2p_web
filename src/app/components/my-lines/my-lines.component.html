@@ -27,7 +27,7 @@
         <span class="my-lines__name">
           <span translate>home.lines.line</span> {{line.id}}</span>
         <div *ngIf="line.n_alerts != 0" class="my-lines__alerts">{{line.n_alerts}}</div>
-        <div class="material-icons">close</div>
+        <div class="material-icons" (click)="removeLine(line.id)">close</div>
       </li>
     </ul>
   </div>

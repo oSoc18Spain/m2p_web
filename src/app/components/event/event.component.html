@@ -57,8 +57,11 @@
         <div class="row_user">Mecánico 2</div>
       </div>
 
-      <div class="current_status">
+      <div *ngIf="event.status === 'in_progress'" class="current_status">
         <span>Actualmente está siendo procesado por QA 4</span>
+      </div>
+      <div *ngIf="event.status === 'pending'" class="assign-to-me">
+        <span>Asignarme esta tarea</span>
       </div>
     </div>
   </div>

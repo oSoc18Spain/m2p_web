@@ -46,12 +46,7 @@ export class MyLinesComponent implements OnInit {
             return e.id === id;
           })
         )
-      : this.selectedLines.splice(
-          this.selectedLines.findIndex(e => {
-            return e.id === id;
-          }),
-          1
-        );
+      : this.removeLine(id);
     this.needsToUpdate = true;
   };
 
@@ -61,6 +56,17 @@ export class MyLinesComponent implements OnInit {
     });
     return elem !== undefined;
   };
+
+  removeLine = (id:number) => {
+    (this.currentLineService.currentLine.subscribe(idLine => {
+      if(id === idLine){
+        this.currentLineService.changeLine(-1);
+        this.currentLines.splice(
+          this.currentLines.findIndex(e => {return e.id == 4}),1)
+      }
+    }));
+  }
+
   toogleLinesToSubscribe = (deleteChanges?: boolean) => {
     if (deleteChanges) this.setAllLines();
     this.showLinesToSubscribe = !this.showLinesToSubscribe;
